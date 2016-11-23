@@ -1,0 +1,67 @@
+@import 'slick';
+
+.carousel {
+	
+	&--home {
+		margin: 0 (-1 * $grid-gutter-width / 2) 25px;
+		
+		@media (min-width: $screen-sm){
+			margin: 0 (-1 * $grid-gutter-width * 1.65) 25px;
+			margin: 0 calc(-1 * (50vw - 50%)) 25px;
+		}
+		@media (min-width: $screen-md){
+			margin: 0 0 25px;
+		}
+	}
+	
+	&__img {
+		width: 100%;
+	}
+	
+}
+
+.slick-dots {
+	@include list-unstyled;
+	text-align: center;
+	margin: 5px auto 0;
+	
+	@media (min-width: $screen-sm) {
+		position: absolute;
+		left: 10px;
+		top: 50%;
+		margin: 0;
+		transform: translateY(-50%);
+	}
+	
+	li {
+		display: inline-block;
+		margin: 2px;
+		
+		@media (min-width: $screen-sm) {
+			display: block;
+			margin: 0.5em 0;
+		}
+	}
+	
+	button {
+		display: block;
+		color: transparent; // не показывать цифры
+		font-size: $font-size-small;
+		line-height: 1;
+		width: 1em;
+		height: 1em;
+		border-radius: 50%;
+		background: $brand-primary-lighter;
+		border: 0;
+		padding: 0;
+		
+		&:focus {
+			outline: none;
+		}
+	}
+	
+	.slick-active button,
+	button:hover {
+		background: $brand-primary-light;
+	}
+}

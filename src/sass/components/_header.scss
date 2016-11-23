@@ -1,0 +1,175 @@
+.header {
+	
+	&__top {
+		background: $header-top-bg;
+		padding: 2rem 0 1rem;
+		
+		@media (min-width: $screen-sm){
+			padding-bottom: 1.5rem;
+		}
+		
+		&-logo svg {
+			width: 130px;
+			height: 4rem;
+			
+			@media (min-width: $screen-sm){
+				width: 170px;
+				height: 5rem;
+			}
+		}
+		.tel {
+			font-weight: bold;
+			color: $header-link-color;
+		}
+		&-logo .tel {
+			margin-top: 1rem;
+		}
+		&-feedback .tel {
+			margin-bottom: 1em;
+		}
+		
+		&-links {
+			padding-top: 2rem;
+			
+			@media (min-width: $screen-sm){
+				padding-top: 0;
+				padding-left: 4rem;
+				margin-bottom: 1rem;
+			}
+			
+			a {
+				display: block;
+				font-size: $font-size-base - 1;
+				color: $header-link-color;
+				margin-bottom: $font-size-small;
+				text-decoration: underline;
+				
+				@media (min-width: $screen-sm){
+					display: inline-block;
+					margin-bottom: 0;
+					margin-right: 3rem;
+				}
+				
+				&:last-child {
+					margin: 0;
+				}
+			}
+		}
+		
+		&-buttons {
+			@include clearfix;
+			margin-top: 1rem;
+			
+			@media (min-width: $screen-sm){
+				padding-left: 4rem;
+			}
+			
+			.header-button {
+				float: left;
+				width: auto;
+				margin-right: 1em;
+				color: #fff;
+				
+				@media (min-width: $screen-sm){
+					margin-right: 3rem;
+				}
+				
+				&:last-of-type {
+					margin-right: 0;
+				}
+				
+				&:hover {
+					text-decoration: none;
+					
+					.icon-box__icon {
+						background: $brand-primary;
+					}
+				}
+			}
+			
+			.icon-box {
+				&__icon {
+					padding: 7px 8px;
+					background: $brown-darker;
+					border-radius: 50%;
+				}
+				&__text {
+					padding-left: 0.5rem;
+				}
+			}
+		}
+		
+		&-feedback {
+			margin-top: -31px;
+			text-align: right;
+		}
+		
+	}
+	
+	
+	&__bottom {
+		background: $header-bottom-bg;
+		
+		&-logo {
+			padding: 2rem 1rem;
+			text-align: right;
+			
+			svg {
+				width: 170px;
+				height: 130px;
+			}
+		}
+	}	
+	
+}
+
+.header-contacts {
+	
+	margin-top: $font-size-large;
+	margin-bottom: 1em;
+	
+	&__title {
+		@include heading;
+		font-size: $font-size-base;
+		margin-bottom: 1em;
+		
+		@media (min-width: $screen-md) {
+			font-size: $font-size-large;
+			margin-bottom: 0.4em;
+		}
+	}
+	
+	&__address {
+		width: 100%;
+		margin-bottom: 1em;
+		
+		&:hover {
+			text-decoration: none;
+		}
+		
+		@media (min-width: $screen-md) {
+			width: auto;
+			margin-bottom: 0;
+			margin-right: $grid-gutter-width;
+		}
+		
+		address {
+			display: inline-block;
+			vertical-align: middle;
+			margin: 0 0.3rem;
+			@include truncate-text;
+			max-width: calc(100% - 3.3em);
+		}
+		.arrow-down {
+			font-size: $font-size-base + 2;
+		}
+	}
+	
+	&__workhours {
+		line-height: 23px;
+	}
+	
+	.readmore {
+		margin-left: 0.3em;
+	}
+}

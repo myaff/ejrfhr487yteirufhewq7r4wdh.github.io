@@ -1,0 +1,18 @@
+.sidebar {
+	max-width: $sidebar-width;
+}
+
+.banners {
+	margin-top: 50px;
+	&__item {
+		border-radius: $border-radius-base;
+		margin-bottom: 27px;
+		
+		img {
+			@include img-responsive;
+		}
+	}
+}
+
+@import 'header';
+@import 'footer';

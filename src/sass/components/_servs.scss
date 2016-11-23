@@ -1,0 +1,85 @@
+.servs {
+	margin-bottom: 2.5rem;
+	
+	&__item {
+		font-size: $font-size-base + 1;
+		margin-bottom: 1px;
+		
+		@media (min-width: $screen-xs) {
+			font-size: $font-size-base - 1;
+			margin-bottom: 2rem;
+		}
+	}
+	
+	&__item-link {
+		color: currentColor;
+		background: $gray-lighter;
+		border-radius: $border-radius-base;
+		
+		&:hover {
+			background: $gray-light;
+			color: currentColor;
+			text-decoration: none;
+			
+			.next {
+				opacity: 1;
+			}
+		}
+		
+		@media (min-width: $screen-xs) {
+			&, &:hover {
+				background: transparent;
+				
+				.next {
+					opacity: 0;
+				}
+			}
+		}
+	}
+	
+	
+	&__item-title,
+	&__item-icon {
+		padding: 7px;
+	}
+	
+	&__item-title {
+		padding-left: 3px;
+		padding-right: 27px;
+		
+		@media (min-width: $screen-xs) {
+			padding: 0;
+		}
+	}
+	
+	&__item-icon {
+		width: ($font-size-large + 3) + 5px * 2 + 3px * 2 + 7px * 2;
+		
+		@media (min-width: $screen-xs) {
+			width: ($font-size-large + 6) + 5px * 2 +3px * 2 + 10px;
+			padding: 0;
+		}
+		
+		.icon {
+			box-sizing: content-box;
+			padding: 5px;
+			border: 3px solid $gray-light;
+			border-radius: 50%;
+			background: #fff;
+			font-size: $font-size-large + 3;
+			
+			@media (min-width: $screen-xs) {
+				font-size: $font-size-large + 6;
+			}
+		}
+	}
+	
+	.next {
+		position: absolute;
+		right: 25px;
+		top: 50%;
+		margin-top: -0.5em;
+		color: $brown-dark;
+		opacity: 0;
+	}
+}

@@ -1,0 +1,33 @@
+{
+  "name": "ejrfhr487yteirufhewq7r4wdh.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myaff/ejrfhr487yteirufhewq7r4wdh.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/myaff/ejrfhr487yteirufhewq7r4wdh.github.io/issues"
+  },
+  "homepage": "https://github.com/myaff/ejrfhr487yteirufhewq7r4wdh.github.io#readme",
+  "devDependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "browser-sync": "^2.18.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-cache": "^0.4.5",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^2.2.0",
+    "gulp-svg-sprite": "^1.3.6",
+    "gulp-uglifyjs": "^0.6.2",
+    "sassdoc": "^2.1.20"
+  }
+}

@@ -1,0 +1,20 @@
+.news {
+	&__item {
+		margin-bottom: 2em;
+	}
+	
+	&__item-date {
+		font-size: $font-size-small + 1;
+		font-weight: bold;
+	}
+	
+	&__item-title {
+		font-size: $font-size-large - 1;
+		color: $brown-lighter;
+		margin: 1rem 0;
+		
+		a {
+			color: currentColor;
+		}
+	}
+}

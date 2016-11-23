@@ -1,0 +1,41 @@
+.contacts {
+	
+	&__panel {
+		border-width: 2px;
+		margin-bottom: 40px;
+		
+		.panel-body {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+	
+	&__panel-title {
+		color: $brand-primary;
+		margin-bottom: 1em;
+		
+		a:hover {
+			text-decoration: none;
+		}
+		
+		.icon {
+			margin-left: 1rem;
+		}
+	}
+	
+	&__address {
+		margin-bottom: 1rem;
+	}
+	
+	&__workhours {
+		margin-bottom: 0;
+		
+		dt {
+			width: 90px;
+			text-align: left;
+		}
+		dd {
+			margin-left: 100px;
+		}
+	}
+}

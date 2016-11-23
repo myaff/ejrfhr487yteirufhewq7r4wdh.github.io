@@ -1,0 +1,13 @@
+.header-menu {
+	$font-size: $font-size-base - 1;
+	margin-top: 1em;
+	
+	&__wrapper {
+		padding-top: 2rem;
+		margin-bottom: $font-size-large;
+	}
+	
+	.nav &__link {
+		padding: 5px 15px;
+	}
+}

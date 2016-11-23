@@ -1,0 +1,20 @@
+.footer-menu {
+	font-size: $font-size-base;
+	color: $footer-menu-color;
+	
+	@media (max-width: $screen-md){
+		font-size: $font-size-base - 1;
+	}
+	
+	&__item {
+		margin-bottom: 0.5em;
+	}
+	
+	&__link {
+		text-decoration: underline;
+		
+		&:hover {
+			color: $footer-menu-hover-color;
+		}
+	}
+}

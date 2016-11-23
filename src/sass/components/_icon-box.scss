@@ -1,0 +1,21 @@
+.icon-box {
+	
+	display: table-row;
+	width: 100%;
+	vertical-align: middle;
+	
+	&__wrapper {
+		display: table;
+		width: 100%;
+	}
+	
+	&__icon,
+	&__text {
+		display: table-cell;
+		vertical-align: middle;
+	}
+	
+	&__icon {
+		line-height: 1;
+	}
+}

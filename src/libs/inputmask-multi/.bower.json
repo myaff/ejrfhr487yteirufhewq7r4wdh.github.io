@@ -1,0 +1,47 @@
+{
+  "name": "inputmask-multi",
+  "description": "Inputmask Multi is a plugin which allows to select a mask of input basing on the beginning of entered data (such as an international phone number)",
+  "version": "1.2.0",
+  "main": "js/jquery.inputmask-multi.js",
+  "authors": [
+    {
+      "name": "Andrey Egorov",
+      "homepage": "https://github.com/andr-04"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "inputmask",
+    "phone",
+    "phonenumber",
+    "list",
+    "multi",
+    "several",
+    "mask",
+    "selection",
+    "jquery-plugin",
+    "ecosystem:jquery"
+  ],
+  "homepage": "https://github.com/andr-04/inputmask-multi",
+  "dependencies": {
+    "jquery": ">=1.5",
+    "jquery.inputmask": ">=3.2.0"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "1.2.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.2.0",
+    "commit": "9750ef5a6100ed1bbfe7ed1fa55413a2850afdb7"
+  },
+  "_source": "https://github.com/andr-04/inputmask-multi.git",
+  "_target": "^1.2.0",
+  "_originalSource": "inputmask-multi",
+  "_direct": true
+}
