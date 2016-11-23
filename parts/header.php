@@ -18,16 +18,16 @@
 		<div class="header__top">
 			<div class="container">
 				<div class="row">
-					<div class="col-xs-6 col-sm-3 header__top-logo hidden-lg">
+					<div class="col-xs-6 col-sm-3 header__top-logo hidden-md hidden-lg">
 						<div class="logo"><a href="#"><svg><use xlink:href="#logo"/></svg></a></div>
 						<div class="tel hidden-sm">+7&nbsp;(8692)&nbsp;417&#8209;100</div>
 					</div>
-					<div class="col-xs-6 col-sm-6 col-lg-4 header__top-links">
-						<a href="#">Записаться на прием</a>
-						<a href="#">Узнать статус дела</a>
+					<div class="col-xs-6 col-sm-6 col-md-5 header__top-links">
+						<a href="#">Записаться на прием <svg class="icon"><use xlink:href="#arrow-circle"/></svg></a>
+						<a href="#">Узнать статус дела <svg class="icon"><use xlink:href="#arrow-circle"/></svg></a>
 					</div>
-					<div class="col-xs-12 col-sm-6 header__top-buttons">
-						<a href="#" class="icon-box__wrapper header-button">
+					<div class="col-xs-12 col-sm-6 col-md-2 header__top-buttons">
+						<a href="#" class="icon-box__wrapper header-button hidden-md hidden-lg">
 							<div class="icon-box">
 								<div class="icon-box__icon"><svg class="icon"><use xlink:href="#burger"/></svg></div>
 								<div class="icon-box__text">Меню</div>
@@ -39,14 +39,18 @@
 								<div class="icon-box__text">Личный кабинет</div>
 							</div>
 						</a>
-						<a href="#" class="icon-box__wrapper header-button">
+						<a href="#" class="icon-box__wrapper header-button hidden-md hidden-lg">
 							<div class="icon-box">
 								<div class="icon-box__icon"><svg class="icon"><use xlink:href="#zoom-light"/></svg></div>
 							</div>
 						</a>
 					</div>
-					<div class="hidden-xs col-sm-3 header__top-feedback">
-						<div class="tel">+7&nbsp;(8692)&nbsp;417&#8209;100</div>
+					<div class="hidden-xs hidden-sm col-md-3 header__top-search">search</div>
+					<div class="hidden-xs col-sm-3 col-md-2 header__top-feedback">
+						<div class="tel">
+							<svg class="icon hidden-sm"><use xlink:href="#phone"/></svg>
+							+7&nbsp;(8692)&nbsp;417&#8209;100
+						</div>
 						<a href="#" class="btn">Обратная связь</a>
 					</div>
 				</div>
