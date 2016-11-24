@@ -54,7 +54,7 @@
   border: 1px solid $modal-content-fallback-border-color; //old browsers fallback (ie8 etc)
   border: 1px solid $modal-content-border-color;
   border-radius: $border-radius-base;
-  @include box-shadow(0 2px 6px rgba(0,0,0,.2));
+  @include box-shadow(0 2px 4px rgba(0,0,0,.2));
   background-clip: padding-box;
   // Remove focus outline from opened modal
   outline: 0;
@@ -100,6 +100,16 @@
   > *:first-child {
 	  margin-top: 0;
   }
+  
+  @media (max-width: $screen-md){
+	  padding: $modal-inner-padding - 5;
+  }
+  @media (max-width: $screen-sm){
+	  padding: $modal-inner-padding - 10;
+  }
+  @media (max-width: $screen-md){
+	  padding: $modal-inner-padding - 20;
+  }
 }
 
 // Footer (for actions)
@@ -141,7 +151,7 @@
     margin: 30px auto;
   }
   .modal-content {
-    @include box-shadow(0 5px 15px rgba(0,0,0,.5));
+    //@include box-shadow(0 5px 15px rgba(0,0,0,.5));
   }
 
   // Modal sizes

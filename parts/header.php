@@ -28,7 +28,6 @@
 						<a href="#">Узнать статус дела <svg class="icon"><use xlink:href="#arrow-circle"/></svg></a>
 					</div>
 					<div class="col-xs-12 col-sm-6 col-md-3 col-lg-2 header__top-buttons">
-						<!-- <a href="#" class="icon-box__wrapper header-button hidden-md hidden-lg js-toggle-class" data-target="#mobile-menu"> -->
 						<a href="#" class="icon-box__wrapper header-button hidden-md hidden-lg" data-target="#mobile-menu" data-toggle="modal">
 							<div class="icon-box">
 								<div class="icon-box__icon"><svg class="icon"><use xlink:href="#burger"/></svg></div>
@@ -80,7 +79,7 @@
 									<svg class="icon arrow-down"><use xlink:href="#arrow-circle"/></svg>
 								</a>
 								<div class="header-contacts__workhours">
-									<b>Пн.-Пт:</b>&nbsp;08:00&nbsp;-&nbsp;20:00, <b>Сб.:</b>&nbsp;09:00&nbsp;-&nbsp;16:00, <b>Вс.:</b>&nbsp;Выходной
+									<span><b>Пн.-Пт:</b>&nbsp;08:00&nbsp;-&nbsp;20:00, <b>Сб.:</b>&nbsp;09:00&nbsp;-&nbsp;16:00, <b>Вс.:</b>&nbsp;Выходной</span>
 									<a href="#" class="readmore">Подробнее</a>
 								</div>
 							</div>

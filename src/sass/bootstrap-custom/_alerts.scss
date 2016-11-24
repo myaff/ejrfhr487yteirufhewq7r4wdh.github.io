@@ -6,11 +6,25 @@
 // Base styles
 // -------------------------
 
+@mixin triangle($size: 10px){
+	display: block;
+	width: 0;
+	height: 0;
+	border-top: $size/2 solid currentColor;
+	border-left: $size/2 solid currentColor;
+	border-right: $size/2 solid transparent;
+	border-bottom: $size/2 solid transparent;
+	position: absolute;
+	bottom: -1 * $size;
+};
+
 .alert {
   padding: $alert-padding;
-  margin-bottom: $line-height-computed;
+  margin-bottom: $grid-gutter-width;
   border: 1px solid transparent;
   border-radius: $alert-border-radius;
+  position: relative;
+  display: flex;
 
   // Headings for larger alerts
   h4 {
@@ -29,9 +43,36 @@
   > ul {
     margin-bottom: 0;
   }
+	ul {
+		margin-top: 0.3em;
+		li {
+			margin-bottom: 0.3em;
+		}
+	}
 
   > p + p {
     margin-top: 5px;
+  }
+  
+  &__icon {
+	  font-size: 24px;
+	  line-height: 1;
+	  float: left;
+	  margin-right: 0.5em;
+  }
+  &__icon + &__text {
+	  min-height: 24px;
+	  display: flex;
+	  align-items: center;
+	  > * {
+		  width: 100%;
+	  }
+  }
+  
+  &::before {
+	  content: '';
+	  @include triangle;
+	  right: 7%;
   }
 }
 
@@ -58,6 +99,12 @@
 
 .alert-success {
   @include alert-variant($alert-success-bg, $alert-success-border, $alert-success-text);
+  .icon {
+	  fill: $alert-success-icon;
+  }
+  &::before {
+	  color: $alert-success-bg;
+  }
 }
 
 .alert-info {
@@ -70,4 +117,16 @@
 
 .alert-danger {
   @include alert-variant($alert-danger-bg, $alert-danger-border, $alert-danger-text);
+  .icon {
+	  fill: $alert-danger-icon;
+  }
+  &::before {
+	  color: $alert-danger-border;
+  }
+  &::after {
+	  content: '';
+	  @include triangle(8px);
+	  right: calc(7% + 1px);
+	  color: #fff;
+  }
 }

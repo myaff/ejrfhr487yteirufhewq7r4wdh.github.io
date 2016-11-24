@@ -58,6 +58,8 @@
                     <File name="src\images\svg\zadat-vopros.svg" />
                     <File name="src\images\svg\zoom-light.svg" />
                     <File name="src\images\svg\zoom.svg" />
+                    <File name="src\images\svg\check.svg" />
+                    <File name="src\images\svg\error.svg" />
                 </Folder>
             </Folder>
             <Folder name="js">

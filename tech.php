@@ -107,6 +107,23 @@
 </div>
 <div class="row">
 	<div class="col-xs-12 col-sm-7 col-md-6">
+		<div class="alert alert-success">
+			<div class="alert__icon"><svg class="icon"><use xlink:href="#check"/></svg></div>
+			<div class="alert__text">Сообщение успешно отправлено.</div>
+		</div>
+		<div class="alert alert-danger">
+			<div class="alert__icon"><svg class="icon"><use xlink:href="#error"/></svg></div>
+			<div class="alert__text">
+				<ul>
+					<li>Неверный логин и/или пароль.</li>
+					<li>Для быстрой и корректной обработки Вашего заказа введите правильный ИНН.</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-12 col-sm-7 col-md-6">
 		<div class="modal-dialog">
 			<a href="#" class="close-custom" aria-label="Close"><span></span><span></span></a>
 			<div class="modal-content form__wrapper">
@@ -137,21 +154,15 @@
 								<label for="field-05">Комментарий</label>
 								<textarea id="field-05" rows="4" class="form-control"></textarea>
 							</div>
-							<div class="alert alert-danger">Неверный логин и/или пароль.</div>
+							<div class="alert alert-danger">
+								<div class="alert__icon"><svg class="icon"><use xlink:href="#error"/></svg></div>
+								<div class="alert__text">Неверный логин и/или пароль.</div>
+							</div>
 							<input type="submit" class="btn btn-primary btn-sm pull-right" value="Отправить"/>
 						</div>
 					</form>
 				</div>
 			</div>
-		</div>
-	</div>
-	<div class="col-xs-12 col-sm-7 col-md-6">
-		<div class="alert alert-success">Сообщение успешно отправлено.</div>
-		<div class="alert alert-danger">
-			<ul>
-				<li>Неверный логин и/или пароль.</li>
-				<li>Для быстрой и корректной обработки Вашего заказа введите правильный ИНН.</li>
-			</ul>
 		</div>
 	</div>
 </div>

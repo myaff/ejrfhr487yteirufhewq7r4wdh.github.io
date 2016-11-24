@@ -15,14 +15,17 @@
 			position: relative;
 		}
 		
-		&-logo svg {
-			width: 130px;
-			height: 4rem;
-			fill: #fff;
-			
-			@media (min-width: $screen-sm){
-				width: 170px;
-				height: 5rem;
+		&-logo {
+			text-align: right;
+			svg {
+				width: 130px;
+				height: 4rem;
+				fill: #fff;
+				
+				@media (min-width: $screen-sm){
+					width: 170px;
+					height: 5rem;
+				}
 			}
 		}
 		.tel {
@@ -31,6 +34,7 @@
 		}
 		&-logo .tel {
 			margin-top: 1rem;
+			margin-right: 1rem;
 		}
 		&-feedback .tel {
 			margin-bottom: 1em;
@@ -90,6 +94,10 @@
 		&-buttons {
 			@include clearfix;
 			margin-top: 1rem;
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: center;
+			align-items: center;
 			
 			@media (min-width: $screen-sm){
 				padding-left: 4rem;
@@ -227,6 +235,13 @@
 	
 	&__bottom {
 		background: $header-bottom-bg;
+		margin-bottom: $grid-gutter-width;
+		
+		.page:not(.page-home) & {
+			@media (max-width: $screen-md - 1){
+				background: $header-bottom-bg-mobile;
+			}
+		}
 		
 		&-logo {
 			padding: 2rem 1rem;
@@ -245,23 +260,42 @@
 	
 	$address-line-height: 23px;
 	
-	margin-top: $font-size-large;
-	margin-bottom: 1em;
+	.page-home & {
+		padding-top: $font-size-large;
+	}
+	.page:not(.page-home) &{
+		@media (min-width: $screen-md) {
+			padding-top: $font-size-large;
+		}
+	}
 	
 	&__title {
 		@include heading;
 		font-size: $font-size-base;
-		margin-bottom: 1em;
 		
 		@media (min-width: $screen-md) {
 			font-size: $font-size-large;
 			margin-bottom: 0.4em;
 		}
+		.page:not(.page-home) & {
+			@media (max-width: $screen-md - 1){
+				display: none;
+			}
+		}
+	}
+	
+	.page:not(.page-home) &__info {
+		@include flex-default;
+	}
+	.page-home &__info {
+		@media (min-width: $screen-md) {
+			@include flex-default;
+		}
 	}
 	
 	&__address {
 		width: 100%;
-		margin-bottom: 1em;
+		padding: 0.4rem 0 0.6rem;
 		line-height: $address-line-height;
 		
 		&:hover {
@@ -273,6 +307,26 @@
 			margin-bottom: 0;
 			margin-right: $grid-gutter-width;
 		}
+		.page:not(.page-home) & {
+			@media (min-width: $screen-xs) {
+				width: auto;
+				flex: 1 0 auto;
+				margin-bottom: 0;
+				margin-right: $grid-gutter-width;
+			}
+		}
+		
+		.page-home & {
+			@media (min-width: $screen-md) {
+				width: auto;
+				flex: 1 0 auto;
+			}
+		}
+		.page & {
+			@media (min-width: $screen-lg) {
+				flex: 0 1 auto;
+			}
+		}
 		
 		address {
 			display: inline-block;
@@ -282,6 +336,11 @@
 			max-width: calc(100% - 3.3em);
 			@media (min-width: $screen-md) {
 				max-width: 100%;
+			}
+			.page:not(.page-home) & {
+				@media (min-width: $screen-xs) {
+					max-width: 100%;
+				}
 			}
 		}
 		.arrow-down {
@@ -293,10 +352,45 @@
 	&__workhours {
 		line-height: $address-line-height;
 		color: $brown-darker;
+		min-width: 0;
+		
+		span {
+			margin-right: 0.5rem;
+			vertical-align: bottom;
+		}
+		
+		.page:not(.page-home) & {
+			@media (max-width: 599px){
+				display: none;
+			}
+			@media (min-width: 600px) {
+				flex: 1 1 auto;
+				span {
+					display: inline-block;
+					@include truncate-text;
+					max-width: calc(100% - 100px);
+				}
+			}
+			@media (min-width: $screen-sm) {
+				span {
+					max-width: calc(100% - 120px);
+				}
+			}
+		}
+		.page-home & {
+			@media (min-width: $screen-md) {
+				flex: 1 1 auto;
+				span {
+					display: inline-block;
+					@include truncate-text;
+					max-width: calc(100% - 120px);
+					
+				}
+			}
+		}
 	}
 	
 	.readmore {
-		margin-left: 0.5rem;
 		
 		@media (min-width: $screen-md) {
 			@include btn;
@@ -304,7 +398,7 @@
 			@include btn-xs;
 			
 			text-decoration: none;
-			margin-left: 1rem;
+			margin-left: 0;
 			margin-top: ($address-line-height - $btn-xs-height) / 2;
 		}
 	}
