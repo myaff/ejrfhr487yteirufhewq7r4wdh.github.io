@@ -1,0 +1,177 @@
+<NotepadPlus>
+    <Project name="docs">
+        <Folder name="dist">
+            <Folder name="images">
+                <Folder name="svg">
+                    <File name="dist\images\svg\sprite.svg" />
+                    <File name="dist\images\svg\sprite.symbol.html" />
+                </Folder>
+            </Folder>
+            <Folder name="js">
+                <File name="dist\js\libs.min.js" />
+                <File name="dist\js\scripts.js" />
+            </Folder>
+            <File name="dist\styles.css" />
+            <File name="dist\template_styles.css" />
+        </Folder>
+        <Folder name="parts">
+            <File name="parts\footer-menu-left.php" />
+            <File name="parts\footer-menu-right.php" />
+            <File name="parts\footer.php" />
+            <File name="parts\header-menu.php" />
+            <File name="parts\header.php" />
+            <File name="parts\sidebar-menu.php" />
+            <File name="parts\sidebar.php" />
+            <File name="parts\page-aside-mobile.php" />
+            <File name="parts\page-aside-serv.php" />
+            <File name="parts\variables.php" />
+        </Folder>
+        <Folder name="src">
+            <Folder name="images">
+                <Folder name="svg">
+                    <File name="src\images\svg\arrow-circle.svg" />
+                    <File name="src\images\svg\arrow.svg" />
+                    <File name="src\images\svg\burger.svg" />
+                    <File name="src\images\svg\gosuslugi.svg" />
+                    <File name="src\images\svg\home.svg" />
+                    <File name="src\images\svg\korporac-msp.svg" />
+                    <File name="src\images\svg\logo-full.svg" />
+                    <File name="src\images\svg\logo.svg" />
+                    <File name="src\images\svg\map-pin.svg" />
+                    <File name="src\images\svg\normativnie-docum.svg" />
+                    <File name="src\images\svg\phone.svg" />
+                    <File name="src\images\svg\poluchit-uslugu.svg" />
+                    <File name="src\images\svg\user-2.svg" />
+                    <File name="src\images\svg\user.svg" />
+                    <File name="src\images\svg\uslugi-01.svg" />
+                    <File name="src\images\svg\uslugi-02.svg" />
+                    <File name="src\images\svg\uslugi-03.svg" />
+                    <File name="src\images\svg\uslugi-04.svg" />
+                    <File name="src\images\svg\uslugi-05.svg" />
+                    <File name="src\images\svg\uslugi-06.svg" />
+                    <File name="src\images\svg\uslugi-07.svg" />
+                    <File name="src\images\svg\uslugi-08.svg" />
+                    <File name="src\images\svg\uslugi-09.svg" />
+                    <File name="src\images\svg\uslugi-10.svg" />
+                    <File name="src\images\svg\uslugi-11.svg" />
+                    <File name="src\images\svg\vozm-portala.svg" />
+                    <File name="src\images\svg\zadat-vopros.svg" />
+                    <File name="src\images\svg\zoom-light.svg" />
+                    <File name="src\images\svg\zoom.svg" />
+                </Folder>
+            </Folder>
+            <Folder name="js">
+                <File name="src\js\scripts.js" />
+            </Folder>
+            <Folder name="sass">
+                <Folder name="bootstrap-custom">
+                    <Folder name="mixins">
+                        <File name="src\sass\bootstrap-custom\mixins\_alerts.scss" />
+                        <File name="src\sass\bootstrap-custom\mixins\_background-variant.scss" />
+                        <File name="src\sass\bootstrap-custom\mixins\_border-radius.scss" />
+                        <File name="src\sass\bootstrap-custom\mixins\_buttons.scss" />
+                        <File name="src\sass\bootstrap-custom\mixins\_center-block.scss" />
+                        <File name="src\sass\bootstrap-custom\mixins\_clearfix.scss" />
+                        <File name="src\sass\bootstrap-custom\mixins\_forms.scss" />
+                        <File name="src\sass\bootstrap-custom\mixins\_gradients.scss" />
+                        <File name="src\sass\bootstrap-custom\mixins\_grid-framework.scss" />
+                        <File name="src\sass\bootstrap-custom\mixins\_grid.scss" />
+                        <File name="src\sass\bootstrap-custom\mixins\_hide-text.scss" />
+                        <File name="src\sass\bootstrap-custom\mixins\_image.scss" />
+                        <File name="src\sass\bootstrap-custom\mixins\_labels.scss" />
+                        <File name="src\sass\bootstrap-custom\mixins\_list-group.scss" />
+                        <File name="src\sass\bootstrap-custom\mixins\_nav-divider.scss" />
+                        <File name="src\sass\bootstrap-custom\mixins\_nav-vertical-align.scss" />
+                        <File name="src\sass\bootstrap-custom\mixins\_opacity.scss" />
+                        <File name="src\sass\bootstrap-custom\mixins\_pagination.scss" />
+                        <File name="src\sass\bootstrap-custom\mixins\_panels.scss" />
+                        <File name="src\sass\bootstrap-custom\mixins\_progress-bar.scss" />
+                        <File name="src\sass\bootstrap-custom\mixins\_reset-filter.scss" />
+                        <File name="src\sass\bootstrap-custom\mixins\_reset-text.scss" />
+                        <File name="src\sass\bootstrap-custom\mixins\_resize.scss" />
+                        <File name="src\sass\bootstrap-custom\mixins\_responsive-visibility.scss" />
+                        <File name="src\sass\bootstrap-custom\mixins\_size.scss" />
+                        <File name="src\sass\bootstrap-custom\mixins\_tab-focus.scss" />
+                        <File name="src\sass\bootstrap-custom\mixins\_table-row.scss" />
+                        <File name="src\sass\bootstrap-custom\mixins\_text-emphasis.scss" />
+                        <File name="src\sass\bootstrap-custom\mixins\_text-overflow.scss" />
+                        <File name="src\sass\bootstrap-custom\mixins\_truncate-text.scss" />
+                        <File name="src\sass\bootstrap-custom\mixins\_vendor-prefixes.scss" />
+                    </Folder>
+                    <File name="src\sass\bootstrap-custom\_alerts.scss" />
+                    <File name="src\sass\bootstrap-custom\_badges.scss" />
+                    <File name="src\sass\bootstrap-custom\_breadcrumbs.scss" />
+                    <File name="src\sass\bootstrap-custom\_button-groups.scss" />
+                    <File name="src\sass\bootstrap-custom\_buttons.scss" />
+                    <File name="src\sass\bootstrap-custom\_carousel.scss" />
+                    <File name="src\sass\bootstrap-custom\_close.scss" />
+                    <File name="src\sass\bootstrap-custom\_code.scss" />
+                    <File name="src\sass\bootstrap-custom\_component-animations.scss" />
+                    <File name="src\sass\bootstrap-custom\_dropdowns.scss" />
+                    <File name="src\sass\bootstrap-custom\_forms.scss" />
+                    <File name="src\sass\bootstrap-custom\_glyphicons.scss" />
+                    <File name="src\sass\bootstrap-custom\_grid.scss" />
+                    <File name="src\sass\bootstrap-custom\_input-groups.scss" />
+                    <File name="src\sass\bootstrap-custom\_jumbotron.scss" />
+                    <File name="src\sass\bootstrap-custom\_labels.scss" />
+                    <File name="src\sass\bootstrap-custom\_list-group.scss" />
+                    <File name="src\sass\bootstrap-custom\_media.scss" />
+                    <File name="src\sass\bootstrap-custom\_mixins.scss" />
+                    <File name="src\sass\bootstrap-custom\_modals.scss" />
+                    <File name="src\sass\bootstrap-custom\_navbar.scss" />
+                    <File name="src\sass\bootstrap-custom\_navs.scss" />
+                    <File name="src\sass\bootstrap-custom\_normalize.scss" />
+                    <File name="src\sass\bootstrap-custom\_pager.scss" />
+                    <File name="src\sass\bootstrap-custom\_pagination.scss" />
+                    <File name="src\sass\bootstrap-custom\_panels.scss" />
+                    <File name="src\sass\bootstrap-custom\_popovers.scss" />
+                    <File name="src\sass\bootstrap-custom\_print.scss" />
+                    <File name="src\sass\bootstrap-custom\_progress-bars.scss" />
+                    <File name="src\sass\bootstrap-custom\_responsive-embed.scss" />
+                    <File name="src\sass\bootstrap-custom\_responsive-utilities.scss" />
+                    <File name="src\sass\bootstrap-custom\_scaffolding.scss" />
+                    <File name="src\sass\bootstrap-custom\_tables.scss" />
+                    <File name="src\sass\bootstrap-custom\_theme.scss" />
+                    <File name="src\sass\bootstrap-custom\_thumbnails.scss" />
+                    <File name="src\sass\bootstrap-custom\_tooltip.scss" />
+                    <File name="src\sass\bootstrap-custom\_type.scss" />
+                    <File name="src\sass\bootstrap-custom\_utilities.scss" />
+                    <File name="src\sass\bootstrap-custom\_variables.scss" />
+                    <File name="src\sass\bootstrap-custom\_wells.scss" />
+                </Folder>
+                <Folder name="components">
+                    <Folder name="menus">
+                        <File name="src\sass\components\menus\_footer-menu.scss" />
+                        <File name="src\sass\components\menus\_header-menu.scss" />
+                        <File name="src\sass\components\menus\_menus.scss" />
+                        <File name="src\sass\components\menus\_sidebar-menu.scss" />
+                        <File name="src\sass\components\menus\_mobile-menu.scss" />
+                    </Folder>
+                    <File name="src\sass\components\_carousel.scss" />
+                    <File name="src\sass\components\_contacts.scss" />
+                    <File name="src\sass\components\_footer.scss" />
+                    <File name="src\sass\components\_header.scss" />
+                    <File name="src\sass\components\_icon-box.scss" />
+                    <File name="src\sass\components\_layout.scss" />
+                    <File name="src\sass\components\_news.scss" />
+                    <File name="src\sass\components\_servs.scss" />
+                    <File name="src\sass\components\_slick.scss" />
+                    <File name="src\sass\components\_serv-button.scss" />
+                    <File name="src\sass\components\_search.scss" />
+                    <File name="src\sass\components\_page-aside.scss" />
+                </Folder>
+                <File name="src\sass\styles.scss" />
+                <File name="src\sass\template_styles.scss" />
+                <File name="src\sass\_bootstrap.scss" />
+                <File name="src\sass\_override-variables.scss" />
+            </Folder>
+        </Folder>
+        <File name=".bowerrc" />
+        <File name=".gitignore" />
+        <File name="gulpfile.js" />
+        <File name="index.php" />
+        <File name="package.json" />
+        <File name="README.md" />
+        <File name="tech.php" />
+    </Project>
+</NotepadPlus>

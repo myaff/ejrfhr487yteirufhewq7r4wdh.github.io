@@ -1,0 +1,36 @@
+.search {
+	position: relative;
+	
+	.form-control {
+		background: $gray-light;
+		border-color: transparent;
+		padding-left: 35px;
+		color: $gray-base;
+		
+		@include placeholder($gray-base);
+		
+		@media (max-width: $screen-md){
+			line-height: 20px;
+			height: 30px; 
+		}
+		
+		@media (min-width: $screen-md){
+			background: transparent;
+			border-color: #ab9083;
+			color: #fff;
+			@include placeholder(#fff);
+		}
+	}
+	.icon {
+		font-size: $font-size-base + 2;
+		position: absolute;
+		top: 6px; // 30px - height of box, (30 - 17) / 2
+		left: 0.5em;
+		z-index: 0;
+		
+		@media (min-width: $screen-md){
+			fill: #dbbda4;
+			top: 4px; // 25px - height of box, (25 - 17) / 2
+		}
+	}
+}

@@ -43,103 +43,19 @@
 <div class="servs bordered-box">
 	<div class="servs__title block-title"><a href="#">Услуги по жизненным ситуациям</a></div>
 	<div class="servs__list row">
-		<div class="servs__item col-xs-12 col-sm-4">
-			<a href="#" class="servs__item-link icon-box__wrapper">
-				<div class="servs__item-link-inner icon-box">
-					<div class="servs__item-icon icon-box__icon">
-						<svg class="icon"><use xlink:href="#uslugi-01"/></svg>
+		<?php foreach ($services as $title => $icon) { ?>
+			<div class="servs__item col-xs-12 col-sm-4">
+				<a href="#" class="servs__item-link icon-box__wrapper">
+					<div class="servs__item-link-inner icon-box">
+						<div class="servs__item-icon icon-box__icon icon-circle">
+							<svg class="icon"><use xlink:href="#<?php echo $icon; ?>"/></svg>
+						</div>
+						<div class="servs__item-title icon-box__text"><?php echo $title; ?></div>
 					</div>
-					<div class="servs__item-title icon-box__text">Индивидуальное жилищное строительство</div>
-				</div>
-				<svg class="icon next"><use xlink:href="#arrow"/></svg>
-			</a>
-		</div>
-		<div class="servs__item col-xs-12 col-sm-4">
-			<a href="#" class="servs__item-link icon-box__wrapper">
-				<div class="servs__item-link-inner icon-box">
-					<div class="servs__item-icon icon-box__icon">
-						<svg class="icon"><use xlink:href="#uslugi-08"/></svg>
-					</div>
-					<div class="servs__item-title icon-box__text">Утрата документов</div>
-				</div>
-				<svg class="icon next"><use xlink:href="#arrow"/></svg>
-			</a>
-		</div>
-		<div class="servs__item col-xs-12 col-sm-4">
-			<a href="#" class="servs__item-link icon-box__wrapper">
-				<div class="servs__item-link-inner icon-box">
-					<div class="servs__item-icon icon-box__icon">
-						<svg class="icon"><use xlink:href="#uslugi-10"/></svg>
-					</div>
-					<div class="servs__item-title icon-box__text">Потеря или поиск работы</div>
-				</div>
-				<svg class="icon next"><use xlink:href="#arrow"/></svg>
-			</a>
-		</div>
-		<div class="servs__item col-xs-12 col-sm-4">
-			<a href="#" class="servs__item-link icon-box__wrapper">
-				<div class="servs__item-link-inner icon-box">
-					<div class="servs__item-icon icon-box__icon">
-						<svg class="icon"><use xlink:href="#uslugi-09"/></svg>
-					</div>
-					<div class="servs__item-title icon-box__text">Утрата близкого человека</div>
-				</div>
-				<svg class="icon next"><use xlink:href="#arrow"/></svg>
-			</a>
-		</div>
-		<div class="servs__item col-xs-12 col-sm-4">
-			<a href="#" class="servs__item-link icon-box__wrapper">
-				<div class="servs__item-icon icon-box__icon">
-					<svg class="icon"><use xlink:href="#uslugi-04"/></svg>
-				</div>
-				<div class="servs__item-title icon-box__text">Смена места жительства</div>
-				<svg class="icon next"><use xlink:href="#arrow"/></svg>
-			</a>
-		</div>
-		<div class="servs__item col-xs-12 col-sm-4">
-			<a href="#" class="servs__item-link icon-box__wrapper">
-				<div class="servs__item-link-inner icon-box">
-					<div class="servs__item-icon icon-box__icon">
-						<svg class="icon"><use xlink:href="#uslugi-11"/></svg>
-					</div>
-					<div class="servs__item-title icon-box__text">Опека или попечительство над несовершеннолетними</div>
-				</div>
-				<svg class="icon next"><use xlink:href="#arrow"/></svg>
-			</a>
-		</div>
-		<div class="servs__item col-xs-12 col-sm-4">
-			<a href="#" class="servs__item-link icon-box__wrapper">
-				<div class="servs__item-link-inner icon-box">
-					<div class="servs__item-icon icon-box__icon">
-						<svg class="icon"><use xlink:href="#uslugi-03"/></svg>
-					</div>
-					<div class="servs__item-title icon-box__text">Открытие своего дела</div>
-				</div>
-				<svg class="icon next"><use xlink:href="#arrow"/></svg>
-			</a>
-		</div>
-		<div class="servs__item col-xs-12 col-sm-4">
-			<a href="#" class="servs__item-link icon-box__wrapper">
-				<div class="servs__item-link-inner icon-box">
-					<div class="servs__item-icon icon-box__icon">
-						<svg class="icon"><use xlink:href="#uslugi-06"/></svg>
-					</div>
-					<div class="servs__item-title icon-box__text">Выход на пенсию</div>
-				</div>
-				<svg class="icon next"><use xlink:href="#arrow"/></svg>
-			</a>
-		</div>
-		<div class="servs__item col-xs-12 col-sm-4">
-			<a href="#" class="servs__item-link icon-box__wrapper">
-				<div class="servs__item-link-inner icon-box">
-					<div class="servs__item-icon icon-box__icon">
-						<svg class="icon"><use xlink:href="#uslugi-05"/></svg>
-					</div>
-					<div class="servs__item-title icon-box__text">Рождение ребенка</div>
-				</div>
-				<svg class="icon next"><use xlink:href="#arrow"/></svg>
-			</a>
-		</div>
+					<svg class="icon next"><use xlink:href="#arrow"/></svg>
+				</a>
+			</div>
+		<?php } ?>
 	</div>
 </div>
 <div class="news bordered-box">
@@ -176,33 +92,37 @@
 	<div class="contacts__title block-title"><a href="#">Филиалы и контакты</a></div>
 	<div class="contacts__panel panel panel-custom">
 		<div class="row">
-			<div class="col-sm-4">
-				<img src="images/contacts.png" alt="Map" class="img-responsive contacts__img"/>
+			<div class="col-sm-3 col-md-4">
+				<picture class="contacts__img">
+					<source media="(max-width: 1200px)" srcset="images/map-mobile.png 167w" sizes="21vw">
+					<source media="(min-width: 1199px)" srcset="images/map.png 261w" sizes="100vw">
+					<img srcset="images/map-mobile.png" alt="Map" class="img-responsive"/>
+				</picture>
 			</div>
-			<div class="col-sm-8">
+			<div class="col-sm-9 col-md-8">
 				<div class="panel-body">
 					<div class="panel-title contacts__panel-title">
 						<a href="#">
-							<span>МФЦ ул.Вокзальная, 10 г. Севастополя</span>
+							<span>МФЦ ул.Вокзальная,&nbsp;10 г.&nbsp;Севастополя</span>
 							<svg class="icon arrow-down"><use xlink:href="#arrow-circle"/></svg>
 						</a>
 					</div>
 					<div class="row">
-						<div class="col-sm-6 col-md-7">
+						<div class="col-sm-6">
 							<address class="contacts__address">
-								г. Севастополь, ул. Вокзальная, д.10<br/>
+								г.&nbsp;Севастополь, ул.&nbsp;Вокзальная,&nbsp;д.10<br/>
 								<strong>+7&nbsp;(8692)&nbsp;417&nbsp;100</strong>
 							</address>
-							<a href="#" class="btn">Подробнее</a>
+							<a href="#" class="btn btn-primary btn-sm">Подробнее</a>
 						</div>
-						<div class="col-sm-6 col-md-5">
+						<div class="col-sm-6">
 							<dl class="contacts__workhours dl-horizontal">
 								<dt>Пн.-Пт</dt>
-								<dd>08:00 - 20:00</dd>
+								<dd>08:00&nbsp;&#8209;&nbsp;20:00</dd>
 							</dl>
 							<dl class="contacts__workhours dl-horizontal">
 								<dt>Суббота</dt>
-								<dd>09:00 - 16:00</dd>
+								<dd>09:00&nbsp;&#8209;&nbsp;16:00</dd>
 							</dl>
 							<dl class="contacts__workhours dl-horizontal">
 								<dt>Воскресенье</dt>

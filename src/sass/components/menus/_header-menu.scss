@@ -10,4 +10,25 @@
 	.nav &__link {
 		padding: 5px 15px;
 	}
+	
+	.dropdown-menu {
+		width: 170px;
+		font-size: $font-size;
+		padding-bottom: 30px;
+		
+		&__item {
+			margin-bottom: 1rem;
+			padding: 0 20px;
+		}
+		&__link {
+			display: inline;
+			text-decoration: underline;
+			padding: 0;
+			white-space: initial;
+			
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
 }

@@ -6,7 +6,7 @@
 // Base styles
 // --------------------------------------------------
 
-.btn {
+@mixin btn {
   display: inline-block;
   margin-bottom: 0; // For input.btn
   font-weight: $btn-font-weight;
@@ -54,6 +54,10 @@
   // [converter] extracted a& to a.btn
 }
 
+.btn {
+	@include btn;
+}
+
 a.btn {
   &.disabled,
   fieldset[disabled] & {
@@ -65,11 +69,30 @@ a.btn {
 // Alternate buttons
 // --------------------------------------------------
 
-.btn-default {
+@mixin btn-default {
   @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+  
+  &:hover {
+	  color: #fff;
+	  background: $btn-default-hover-bg;
+	  border-color: transparent;
+  }
+}
+.btn-default {
+	@include btn-default;
+}
+@mixin btn-primary {
+  @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+  
+  &:hover {
+	  background: $btn-primary-hover-bg;
+  }
 }
 .btn-primary {
-  @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+	@include btn-primary;
+}
+.btn-secondary {
+	@include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
 }
 // Success appears as green
 .btn-success {
@@ -132,17 +155,37 @@ a.btn {
 // Button Sizes
 // --------------------------------------------------
 
-.btn-lg {
+@mixin btn-lg {
   // line-height: ensure even-numbered height of button next to large input
-  @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $btn-border-radius-large);
+  @include button-size($padding-large-vertical + 1, $padding-large-horizontal, $font-size-large - 2, 1, $btn-border-radius-base);
 }
-.btn-sm {
+.btn-lg {
+	@include btn-lg;
+	font-weight: bold;
+}
+@mixin btn-sm {
   // line-height: ensure proper height of button next to small input
-  @include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small);
+  //@include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, //$btn-border-radius-small);
+  @include button-size($padding-base-vertical, 25px, $font-size-base, 1, $btn-border-radius-small);
+  
+  &.btn-default {
+	   @include button-size(7px, 28px, $font-size-small + 1, 1, $btn-border-radius-small);
+  }
+}
+// padding-top + padding-bottom ( = padding-top + 1) + line-height ( 1 = font-size + 1) + border
+$btn-sm-height: (7px * 2 + 1px) + ($font-size-small + 1px) + 2px;
+.btn-sm {
+	@include btn-sm;
+}
+@mixin btn-xs {
+  //@include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, //$btn-border-radius-small);
+  @include button-size(3px, 1em, $font-size-base, $font-size-base + 1, $btn-border-radius-small);
 }
 .btn-xs {
-  @include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small);
+	@include btn-xs;
 }
+// padding-top + padding-bottom ( = padding-top + 1) + line-height ( = font-size-base + 1) + border
+$btn-xs-height: (3px * 2 + 1px) + ($font-size-base + 1px) + 2px;
 
 
 // Block button
@@ -155,7 +198,7 @@ a.btn {
 
 // Vertically space out multiple block buttons
 .btn-block + .btn-block {
-  margin-top: 5px;
+  margin-top: 15px;
 }
 
 // Specificity overrides

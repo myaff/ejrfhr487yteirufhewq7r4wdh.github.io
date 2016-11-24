@@ -23,14 +23,15 @@ $brown-light:           #dbbda4;
 $brown-lighter:         #ca976c;
 
 $brand-primary:         #e04e39;
-$brand-success:         #5cb85c !default;
-$brand-info:            #5bc0de !default;
-$brand-warning:         #f0ad4e !default;
-$brand-danger:          #d9534f !default;
-
 $brand-primary-lighter: #eddfd2;
 $brand-primary-light:   #ed674c;
 $brand-primary-light-2: #e67161;
+
+$brand-success:         #5cb85c !default;
+$brand-info:            #5bc0de !default;
+$brand-warning:         #f0ad4e !default;
+$brand-danger:          $brand-primary;
+
 
 $hr-color:              #eee;
 
@@ -73,6 +74,10 @@ $sidebar-menu-hover-bg:       $gray-lighter;
 $sidebar-menu-active-color:   $gray-base;
 $sidebar-menu-active-bg:      #cfa785;
 
+//** Page aside
+$page-aside-width: 333px;
+$page-aside-big-width: 340px;
+$page-aside-bg: $gray-lighter;
 
 //== Typography
 //
@@ -96,7 +101,7 @@ $font-size-h5:            $font-size-base !default;
 $font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
 
 //** Unit-less `line-height` for use in components like buttons.
-$line-height-base:        1.428571429 !default; // 20/14
+$line-height-base:        1.33;
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
 $line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
 
@@ -186,13 +191,20 @@ $table-border-color:            #eee;
 
 $btn-font-weight:                normal !default;
 
-$btn-default-color:              #333 !default;
-$btn-default-bg:                 #fff !default;
-$btn-default-border:             #ccc !default;
+$btn-default-color:              $brown-base;
+$btn-default-bg:                 transparent;
+$btn-default-hover-bg:           $brown-base;
+$btn-default-border:             $brown-base;
 
 $btn-primary-color:              #fff !default;
 $btn-primary-bg:                 $brand-primary !default;
-$btn-primary-border:             darken($btn-primary-bg, 5%) !default;
+$btn-primary-hover-bg:           $brand-primary-light-2;
+$btn-primary-border:             transparent;
+
+$btn-secondary-color:              #fff !default;
+$btn-secondary-bg:                 #c39167;
+$btn-secondary-hover-bg:           #c39167;
+$btn-secondary-border:             transparent;
 
 $btn-success-color:              #fff !default;
 $btn-success-bg:                 $brand-success !default;
@@ -215,7 +227,7 @@ $btn-link-disabled-color:        $gray-light !default;
 // Allows for customizing button radius independently from global border radius
 $btn-border-radius-base:         $border-radius-base !default;
 $btn-border-radius-large:        $border-radius-large !default;
-$btn-border-radius-small:        $border-radius-small !default;
+$btn-border-radius-small:        $border-radius-base;
 
 
 //== Forms
@@ -252,7 +264,7 @@ $input-height-base:              ($line-height-computed + ($padding-base-vertica
 //** Large `.form-control` height
 $input-height-large:             (ceil($font-size-large * $line-height-large) + ($padding-large-vertical * 2) + 2) !default;
 //** Small `.form-control` height
-$input-height-small:             (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2) !default;
+$input-height-small:             ($font-size-base + (($padding-small-vertical - 1) * 2) + 2);
 
 //** `.form-group` margin
 $form-group-margin-bottom:       15px !default;
@@ -274,20 +286,20 @@ $cursor-disabled:                not-allowed !default;
 //## Dropdown menu container and contents.
 
 //** Background for the dropdown menu.
-$dropdown-bg:                    #fff !default;
+$dropdown-bg:                    $gray-lighter;
 //** Dropdown menu `border-color`.
-$dropdown-border:                rgba(0,0,0,.15) !default;
+$dropdown-border:                transparent;
 //** Dropdown menu `border-color` **for IE8**.
-$dropdown-fallback-border:       #ccc !default;
+$dropdown-fallback-border:       $gray-lighter;
 //** Divider color for between dropdown items.
-$dropdown-divider-bg:            #e5e5e5 !default;
+$dropdown-divider-bg:            $gray-light;
 
 //** Dropdown link text color.
-$dropdown-link-color:            $gray-dark !default;
+$dropdown-link-color:            $gray-base;
 //** Hover color for dropdown links.
-$dropdown-link-hover-color:      darken($gray-dark, 5%) !default;
+$dropdown-link-hover-color:      $gray-base;
 //** Hover background for dropdown links.
-$dropdown-link-hover-bg:         #f5f5f5 !default;
+$dropdown-link-hover-bg:         transparent;
 
 //** Active dropdown menu item text color.
 $dropdown-link-active-color:     $component-active-color !default;
@@ -313,11 +325,12 @@ $dropdown-caret-color:           #000 !default;
 
 $zindex-navbar:            1000 !default;
 $zindex-dropdown:          1000 !default;
-$zindex-popover:           1060 !default;
-$zindex-tooltip:           1070 !default;
+$zindex-popover:           1070 !default;
+$zindex-tooltip:           1080 !default;
 $zindex-navbar-fixed:      1030 !default;
 $zindex-modal-background:  1040 !default;
-$zindex-modal:             1050 !default;
+$zindex-page-aside:        1050 !default;
+$zindex-modal:             1060 !default;
 
 
 //== Media queries breakpoints
@@ -555,9 +568,9 @@ $jumbotron-heading-font-size:    ceil(($font-size-base * 4.5)) !default;
 //
 //## Define colors for form feedback states and, by default, alerts.
 
-$state-success-text:             #3c763d !default;
-$state-success-bg:               #dff0d8 !default;
-$state-success-border:           darken(adjust-hue($state-success-bg, -10), 5%) !default;
+$state-success-text:             $gray-base;
+$state-success-bg:               $gray-lighter;
+$state-success-border:           transparent;
 
 $state-info-text:                #31708f !default;
 $state-info-bg:                  #d9edf7 !default;
@@ -567,9 +580,9 @@ $state-warning-text:             #8a6d3b !default;
 $state-warning-bg:               #fcf8e3 !default;
 $state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%) !default;
 
-$state-danger-text:              #a94442 !default;
-$state-danger-bg:                #f2dede !default;
-$state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%) !default;
+$state-danger-text:              $gray-base;
+$state-danger-bg:                #f9dcd7;
+$state-danger-border:            $brand-primary-light-2;
 
 
 //== Tooltips
@@ -647,7 +660,7 @@ $label-link-hover-color:      #fff !default;
 //##
 
 //** Padding applied to the modal body
-$modal-inner-padding:         15px !default;
+$modal-inner-padding:         40px;
 
 //** Padding applied to the modal title
 $modal-title-padding:         15px !default;
@@ -662,7 +675,7 @@ $modal-content-border-color:                   rgba(0,0,0,.2) !default;
 $modal-content-fallback-border-color:          #999 !default;
 
 //** Modal backdrop background color
-$modal-backdrop-bg:           #000 !default;
+$modal-backdrop-bg:           $gray-base;
 //** Modal backdrop opacity
 $modal-backdrop-opacity:      .5 !default;
 //** Modal header border color
@@ -671,7 +684,7 @@ $modal-header-border-color:   #e5e5e5 !default;
 $modal-footer-border-color:   $modal-header-border-color !default;
 
 $modal-lg:                    900px !default;
-$modal-md:                    600px !default;
+$modal-md:                    410px !default;
 $modal-sm:                    300px !default;
 
 
@@ -695,7 +708,7 @@ $alert-warning-bg:            $state-warning-bg !default;
 $alert-warning-text:          $state-warning-text !default;
 $alert-warning-border:        $state-warning-border !default;
 
-$alert-danger-bg:             $state-danger-bg !default;
+$alert-danger-bg:             transparent;
 $alert-danger-text:           $state-danger-text !default;
 $alert-danger-border:         $state-danger-border !default;
 
@@ -884,9 +897,9 @@ $carousel-caption-color:                      #fff !default;
 //
 //##
 
-$close-font-weight:           bold !default;
-$close-color:                 #000 !default;
-$close-text-shadow:           0 1px 0 #fff !default;
+$close-font-weight:           400;
+$close-color:                 #a1897f;
+$close-text-shadow:           none;
 
 
 //== Code

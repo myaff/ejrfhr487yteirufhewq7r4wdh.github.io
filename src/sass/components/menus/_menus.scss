@@ -1,5 +1,10 @@
 .menu {
 	@include list-unstyled;
+	margin-bottom: 0;
+	
+	li:last-child {
+		margin-bottom: 0;
+	}
 	
 	a {
 		color: currentColor;
@@ -9,3 +14,4 @@
 @import 'header-menu';
 @import 'sidebar-menu';
 @import 'footer-menu';
+@import 'mobile-menu';

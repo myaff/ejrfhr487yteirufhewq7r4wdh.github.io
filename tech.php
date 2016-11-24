@@ -105,7 +105,56 @@
 		</tbody>
 	</table>
 </div>
-/****** Forms ******/
+<div class="row">
+	<div class="col-xs-12 col-sm-7 col-md-6">
+		<div class="modal-dialog">
+			<a href="#" class="close-custom" aria-label="Close"><span></span><span></span></a>
+			<div class="modal-content form__wrapper">
+				<div class="modal-body">
+					<h3 class="modal__title">Обратная связь</h3>
+					<form action="" novalidate>
+						<div class="form__body clearfix">
+							<p class="form__note">
+								<span class="require-star">*</span> — Обязательные для заполнения поля
+							</p>
+							<div class="form-group">
+								<label for="field-01">Наименование организации</label>
+								<input type="text" id="field-01" class="form-control" />
+							</div>
+							<div class="form-group required">
+								<label for="field-02"><span class="require-star">*</span> ФИО</label>
+								<input type="text" id="field-02" class="form-control" required value="Константин Пирогов" />
+							</div>
+							<div class="form-group">
+								<label for="field-03">Телефон</label>
+								<input type="tel" id="field-03" class="form-control" />
+							</div>
+							<div class="form-group required has-error">
+								<label for="field-04"><span class="require-star">*</span> E-mail</label>
+								<input type="email" id="field-04" class="form-control" required value="oborudovanie@rambler.ru" />
+							</div>
+							<div class="form-group">
+								<label for="field-05">Комментарий</label>
+								<textarea id="field-05" rows="4" class="form-control"></textarea>
+							</div>
+							<div class="alert alert-danger">Неверный логин и/или пароль.</div>
+							<input type="submit" class="btn btn-primary btn-sm pull-right" value="Отправить"/>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-sm-7 col-md-6">
+		<div class="alert alert-success">Сообщение успешно отправлено.</div>
+		<div class="alert alert-danger">
+			<ul>
+				<li>Неверный логин и/или пароль.</li>
+				<li>Для быстрой и корректной обработки Вашего заказа введите правильный ИНН.</li>
+			</ul>
+		</div>
+	</div>
+</div>
 <h2>H2 Услуги для субъектов малого и среднего предпринимательства в целях оказания им поддержки через многофункциональный центр предоставления государственных и муниципальных услуг:</h2>
 <h3>H3 Услуги для субъектов малого и среднего предпринимательства в целях оказания им поддержки через многофункциональный центр предоставления государственных и муниципальных услуг:</h3>
 <img src="images/keys.jpg" alt="Keys" class="img-responsive pull-left" />

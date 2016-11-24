@@ -11,9 +11,14 @@
 			padding: 1rem 0;
 		}
 		
+		.row {
+			position: relative;
+		}
+		
 		&-logo svg {
 			width: 130px;
 			height: 4rem;
+			fill: #fff;
 			
 			@media (min-width: $screen-sm){
 				width: 170px;
@@ -41,8 +46,12 @@
 			}
 			
 			@media (min-width: $screen-md){
-				padding-left: 0;
 				margin-bottom: 0;
+				margin-left: 16.66667%;
+			}
+			
+			@media (min-width: $screen-lg){
+				padding-left: 0;
 			}
 			
 			a {
@@ -84,10 +93,14 @@
 			
 			@media (min-width: $screen-sm){
 				padding-left: 4rem;
+				margin-top: 0;
 			}
 			@media (min-width: $screen-md){
-				padding-left: 0;
-				margin-top: 0;
+				padding-left: $grid-gutter-width / 2;
+				
+				position: absolute;
+				top: auto;
+				left: 0;
 			}
 			
 			.header-button {
@@ -112,7 +125,15 @@
 					
 					.icon-box__icon {
 						background: $brand-primary;
+						
+						@media (min-width: $screen-md){
+							background: $brown-light;
+						}
 					}
+				}
+				&:focus {
+					outline: none;
+					text-decoration: none;
 				}
 			}
 			
@@ -122,7 +143,7 @@
 					background: $brown-darker;
 					border-radius: 50%;
 					@media (min-width: $screen-md){
-						padding: 0 2px;
+						padding: 0 3px;
 						background: $brown-light;
 						.icon {
 							fill: $header-top-bg;
@@ -146,10 +167,11 @@
 			
 			@media (min-width: $screen-md){
 				margin-top: 0;
+				width: 14.667%;
 				
 				.tel {
 					position: absolute;
-					right: 0;
+					right: $grid-gutter-width / 2;
 					bottom: -9rem;
 					width: 190px;
 					
@@ -167,6 +189,36 @@
 						border-radius: 50%;
 					}
 				}
+			}
+		}
+		
+		&-search {
+			
+			@media (max-width: $screen-md){
+				position: absolute;
+				width: 100vw;
+				top: 75px;
+				left: calc(-1*(50vw - 50%));
+				background: $header-top-bg;
+				padding-bottom: 1em;
+				z-index: $zindex-modal;
+				
+				transform: scaleY(0);
+				transform-origin: top;
+				transition: transform .2s;
+				
+				&.open {
+					transform: scaleY(1);
+				}
+			}
+			
+			@media (max-width: $screen-sm - 1){
+				top: 120px;
+			}
+			
+			@media (min-width: $screen-md){
+				margin-left: 2%;
+				padding-left: 2em;
 			}
 		}
 		
@@ -191,6 +243,8 @@
 
 .header-contacts {
 	
+	$address-line-height: 23px;
+	
 	margin-top: $font-size-large;
 	margin-bottom: 1em;
 	
@@ -208,6 +262,7 @@
 	&__address {
 		width: 100%;
 		margin-bottom: 1em;
+		line-height: $address-line-height;
 		
 		&:hover {
 			text-decoration: none;
@@ -225,17 +280,32 @@
 			margin: 0 0.3rem;
 			@include truncate-text;
 			max-width: calc(100% - 3.3em);
+			@media (min-width: $screen-md) {
+				max-width: 100%;
+			}
 		}
 		.arrow-down {
 			font-size: $font-size-base + 2;
+			stroke: currentColor;
 		}
 	}
 	
 	&__workhours {
-		line-height: 23px;
+		line-height: $address-line-height;
+		color: $brown-darker;
 	}
 	
 	.readmore {
-		margin-left: 0.3em;
+		margin-left: 0.5rem;
+		
+		@media (min-width: $screen-md) {
+			@include btn;
+			@include btn-default;
+			@include btn-xs;
+			
+			text-decoration: none;
+			margin-left: 1rem;
+			margin-top: ($address-line-height - $btn-xs-height) / 2;
+		}
 	}
 }

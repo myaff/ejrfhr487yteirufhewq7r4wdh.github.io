@@ -1,0 +1,63 @@
+.page-aside {
+	position: fixed;
+	display: block!important;
+	top: 0;
+	left: 0;
+	width: 100%;
+	max-width: $page-aside-width;
+	height: 100%;
+	background: $page-aside-bg;
+	z-index: $zindex-page-aside;
+	transform: translateX(-100%);
+	transition: transform .3s ease-out;
+	
+	&.big {
+		max-width: $page-aside-big-width;
+	}
+	
+	&.in {
+		transform: translateX(0);
+	}
+	
+	&__inner {
+		position: relative;
+		height: 100%;
+		padding: $grid-gutter-width $grid-gutter-width $grid-gutter-width*1.5;
+		overflow-y: auto;
+	}
+	
+	&__head,
+	&__body {
+		position: relative;
+		
+		@at-root .big & {
+			padding-left: 25px;
+			padding-right: 25px;
+		}
+	}
+	
+	&.big &__head {
+		padding-top: 35px;
+		padding-bottom: 30px;
+	}
+	
+	&__logo {
+		text-align: right;
+		margin-bottom: 1em;
+		
+		svg {
+			width: 130px;
+			height: 40px;
+			fill: $gray-base;
+		}
+	}
+	
+	&__title {
+		font-size: 24px;
+		font-weight: bold;
+	}
+	
+	&__buttons {
+		margin-top: 30px;
+	}
+}

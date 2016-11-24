@@ -34,3 +34,47 @@ button.close {
   border: 0;
   -webkit-appearance: none;
 }
+
+.close-custom {
+	display: block;
+	width: 1.5em;
+	height: 1.5em;
+	color: $close-color;
+	position: relative;
+	
+	span {
+		position: absolute;
+		display: block;
+		width: 80%;
+		height: 1px;
+		top: 50%;
+		left: 10%;
+		background: currentColor;
+		transform-origin: center;
+		
+		&:first-child {
+			transform: rotate(45deg);
+		}
+		&:last-child {
+			transform: rotate(-45deg);
+		}
+	}
+	
+	.modal &,
+	.modal-dialog & {
+		position: absolute;
+		top: -0.25em;
+		right: -0.25em;
+		z-index: $zindex-page-aside + 1;
+		font-size: 20px;
+		
+		&.close-left {
+			right: auto;
+			left: -0.25em;
+		}
+	}
+	.modal-dialog & {
+		top: 0.5em;
+		right: 0.75em;
+	}
+}

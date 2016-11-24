@@ -87,6 +87,7 @@ gulp.task('svg', function(){
 gulp.task('jslibs', function(){
 	return gulp.src([
 			source + 'libs/jquery/dist/jquery.min.js',
+			source + 'libs/bootstrap/javascripts/bootstrap.min.js',
 			source + 'libs/jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js',
 			source + 'libs/inputmask-multi/js/jquery.inputmask-multi.min.js',
 			source + 'libs/svg4everybody/dist/svg4everybody.min.js',

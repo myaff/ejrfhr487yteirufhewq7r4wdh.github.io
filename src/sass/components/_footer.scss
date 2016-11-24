@@ -1,17 +1,41 @@
 .footer {
 	color: $footer-color;
+	margin-top: 40px;
 	
 	&__top {
 		background: $footer-top-bg;
 		padding: 25px 0 33px;
 	}
+	
+	.btn-default.btn-sm {
+		@media (min-width: $screen-sm) and (max-width: $screen-md){
+			padding-left: 1em;
+			padding-right: 1em;
+		}
+	}
+	
 	// footer top blocks
+	
+	@media (min-width: $screen-md){
+		.flex-row {
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: flex-start;
+			align-items: stretch;
+		}
+	}
+	
 	&__col {
 		
+		@media (min-width: $screen-md){
+			display: flex;
+		}
+		
 		&-inner {
+			width: 100%;
 			padding: 25px 0 35px;
 			border-bottom: 1px solid $footer-top-border;
-			@media (min-width: $screen-xs){
+			@media (min-width: $screen-sm){
 				padding: 0;
 				border-bottom: 0;
 				border-right: 1px solid $footer-top-border;
@@ -20,7 +44,7 @@
 		
 		&:first-of-type &-inner {
 			padding-top: 0;
-			@media (min-width: $screen-xs){
+			@media (min-width: $screen-sm){
 				padding: 0;
 			}
 		}
@@ -28,12 +52,26 @@
 		&:last-of-type &-inner {
 			padding: 20px 0 0;
 			border-bottom: 0;
-			@media (min-width: $screen-xs){
+			@media (min-width: $screen-sm){
 				padding: 0;
 				border-right: 0;
 			}
 		}
 	}
+	
+	&-menus {
+		.btn {
+			margin-top: 2rem;
+			
+			@media (min-width: $screen-sm){
+				margin-top: 1rem;
+			}
+			@media (min-width: $screen-md){
+				margin-top: -1rem;
+			}
+		}
+	}
+	
 	&-lk {
 		&__title {
 			margin-bottom: 1em;
@@ -64,14 +102,31 @@
 				text-decoration: underline;
 			}
 		}
+		.btn {
+			margin-top: 0.5rem;
+			
+			@media (min-width: $screen-sm){
+				margin-top: 0;
+			}
+		}
 	}
 	&-contacts {
 		&__tel {
 			font-size: $font-size-large - 1;
+			line-height: $btn-sm-height;
 			color: #fff;
 			
 			@media (min-width: $screen-xs) {
 				font-size: $font-size-large + 1;
+			}
+		}
+		.btn {
+			@media (max-width: $screen-xs) {
+				padding-left: 1em;
+				padding-right: 1em;
+			}
+			@media (min-width: $screen-sm) {
+				margin-top: 1em;
 			}
 		}
 	}

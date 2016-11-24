@@ -87,8 +87,8 @@
 
   // Sizing
   &.input-sm {
-    padding: $padding-small-vertical $padding-small-horizontal;
-    font-size: $font-size-small;
+    padding: ($padding-small-vertical - 1) $padding-small-horizontal;
+    font-size: $font-size-base;
     border-radius: $input-border-radius-small;
   }
   &.input-lg {

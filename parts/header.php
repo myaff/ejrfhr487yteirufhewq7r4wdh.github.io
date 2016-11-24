@@ -1,3 +1,4 @@
+<?php require('parts/variables.php'); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +14,7 @@
 </head>
 <body>
 <div id="svg-placeholder" class="hidden"><?php require('dist/images/svg/sprite.svg'); ?></div>
-<div class="page">
+<div class="page <?php if($isHome){ ?>page-home<?php } ?>">
 	<div class="header">
 		<div class="header__top">
 			<div class="container">
@@ -22,12 +23,13 @@
 						<div class="logo"><a href="#"><svg><use xlink:href="#logo"/></svg></a></div>
 						<div class="tel hidden-sm">+7&nbsp;(8692)&nbsp;417&#8209;100</div>
 					</div>
-					<div class="col-xs-6 col-sm-6 col-md-5 header__top-links">
+					<div class="col-xs-6 col-sm-6 col-md-5 col-lg-offset-2 header__top-links">
 						<a href="#">Записаться на прием <svg class="icon"><use xlink:href="#arrow-circle"/></svg></a>
 						<a href="#">Узнать статус дела <svg class="icon"><use xlink:href="#arrow-circle"/></svg></a>
 					</div>
-					<div class="col-xs-12 col-sm-6 col-md-2 header__top-buttons">
-						<a href="#" class="icon-box__wrapper header-button hidden-md hidden-lg">
+					<div class="col-xs-12 col-sm-6 col-md-3 col-lg-2 header__top-buttons">
+						<!-- <a href="#" class="icon-box__wrapper header-button hidden-md hidden-lg js-toggle-class" data-target="#mobile-menu"> -->
+						<a href="#" class="icon-box__wrapper header-button hidden-md hidden-lg" data-target="#mobile-menu" data-toggle="modal">
 							<div class="icon-box">
 								<div class="icon-box__icon"><svg class="icon"><use xlink:href="#burger"/></svg></div>
 								<div class="icon-box__text">Меню</div>
@@ -39,19 +41,24 @@
 								<div class="icon-box__text">Личный кабинет</div>
 							</div>
 						</a>
-						<a href="#" class="icon-box__wrapper header-button hidden-md hidden-lg">
+						<a href="#" class="icon-box__wrapper header-button hidden-md hidden-lg js-toggle-class" data-target="#search-box">
 							<div class="icon-box">
-								<div class="icon-box__icon"><svg class="icon"><use xlink:href="#zoom-light"/></svg></div>
+								<div class="icon-box__icon"><svg class="icon"><use xlink:href="#zoom"/></svg></div>
 							</div>
 						</a>
 					</div>
-					<div class="hidden-xs hidden-sm col-md-3 header__top-search">search</div>
+					<div class="col-md-3 header__top-search" id="search-box">
+						<div class="search">
+							<input type="text" class="form-control input-sm" placeholder="Найти">
+							<svg class="icon"><use xlink:href="#zoom-light"/></svg>
+						</div>
+					</div>
 					<div class="hidden-xs col-sm-3 col-md-2 header__top-feedback">
 						<div class="tel">
 							<svg class="icon hidden-sm"><use xlink:href="#phone"/></svg>
 							+7&nbsp;(8692)&nbsp;417&#8209;100
 						</div>
-						<a href="#" class="btn">Обратная связь</a>
+						<a href="#" class="btn btn-primary btn-xs">Обратная связь</a>
 					</div>
 				</div>
 			</div>
@@ -89,7 +96,7 @@
 				<?php require('parts/sidebar.php'); ?>
 			</div>
 			<div class="workarea__wrapper col-xs-12 col-md-9">
-			<?php if (!strpos($_SERVER["REQUEST_URI"], 'index.php') !== false) {?>
+			<?php if (!$isHome) {?>
 				<ol class="breadcrumb">
 					<li class="breadcrumb__item">
 						<a href="#" class="breadcrumb__link">

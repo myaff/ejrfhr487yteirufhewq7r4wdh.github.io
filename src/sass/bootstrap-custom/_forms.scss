@@ -127,7 +127,11 @@ output {
   @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
 
   // Customize the `:focus` state to imitate native WebKit styles.
-  @include form-control-focus;
+  //@include form-control-focus;
+  
+  &:focus {
+	  outline: none;
+  }
 
   // Placeholder
   @include placeholder;
@@ -196,7 +200,7 @@ input[type="search"] {
 
     &.input-sm,
     .input-group-sm & {
-      line-height: $input-height-small;
+      line-height: 1;
     }
 
     &.input-lg,
@@ -328,13 +332,13 @@ input[type="checkbox"] {
 // The `.form-group-* form-control` variations are sadly duplicated to avoid the
 // issue documented in https://github.com/twbs/bootstrap/issues/15074.
 
-@include input-size('.input-sm', $input-height-small, $padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $input-border-radius-small);
+@include input-size('.input-sm', $input-height-small, $padding-small-vertical - 1, $padding-small-horizontal, $font-size-base, 1, $input-border-radius-small);
 .form-group-sm {
   .form-control {
     height: $input-height-small;
-    padding: $padding-small-vertical $padding-small-horizontal;
-    font-size: $font-size-small;
-    line-height: $line-height-small;
+    padding: ($padding-small-vertical - 1) $padding-small-horizontal;
+    font-size: $font-size-base;
+    line-height: 1;
     border-radius: $input-border-radius-small;
   }
   select.form-control {
@@ -455,6 +459,16 @@ input[type="checkbox"] {
   margin-top: 5px;
   margin-bottom: 10px;
   color: lighten($text-color, 25%); // lighten the text some for contrast
+}
+@mixin require-star {
+	font-size: 27px;
+	line-height: 1;
+	font-weight: bold;
+	color: $brand-danger;
+	vertical-align: middle;
+}
+.require-star {
+	@include require-star;
 }
 
 

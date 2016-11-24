@@ -17,5 +17,18 @@
 	
 	&__icon {
 		line-height: 1;
+		
+		&.icon-circle {
+			width: ($font-size-large + 3) + 5px * 2 + 3px * 2 + 7px * 2;
+			
+			.icon {
+				box-sizing: content-box;
+				padding: 5px;
+				border: 3px solid $gray-light;
+				border-radius: 50%;
+				background: #fff;
+				font-size: $font-size-large + 3;
+			}
+		}
 	}
 }
