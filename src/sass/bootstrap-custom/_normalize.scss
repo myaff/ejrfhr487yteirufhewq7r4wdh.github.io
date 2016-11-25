@@ -433,5 +433,7 @@ svg {
 	&.arrow-down {
 		transform: rotate(90deg);
 		transform-origin: center;
+		fill: none;
+		stroke: currentColor;
 	}
 }

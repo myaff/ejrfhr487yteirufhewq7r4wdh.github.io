@@ -93,11 +93,9 @@
 	<div class="contacts__panel panel panel-custom">
 		<div class="row">
 			<div class="col-sm-3 col-md-4">
-				<picture class="contacts__img">
-					<source media="(max-width: 1200px)" srcset="images/map-mobile.png 167w" sizes="21vw">
-					<source media="(min-width: 1199px)" srcset="images/map.png 261w" sizes="100vw">
-					<img srcset="images/map-mobile.png" alt="Map" class="img-responsive"/>
-				</picture>
+				<div class="contacts__img-wrapper">
+					<img src="images/map.jpg" alt="Map" class="contacts__img"/>
+				</div>
 			</div>
 			<div class="col-sm-9 col-md-8">
 				<div class="panel-body">
@@ -108,14 +106,14 @@
 						</a>
 					</div>
 					<div class="row">
-						<div class="col-sm-6">
+						<div class="col-sm-7">
 							<address class="contacts__address">
 								г.&nbsp;Севастополь, ул.&nbsp;Вокзальная,&nbsp;д.10<br/>
 								<strong>+7&nbsp;(8692)&nbsp;417&nbsp;100</strong>
 							</address>
 							<a href="#" class="btn btn-primary btn-sm">Подробнее</a>
 						</div>
-						<div class="col-sm-6">
+						<div class="col-sm-5">
 							<dl class="contacts__workhours dl-horizontal">
 								<dt>Пн.-Пт</dt>
 								<dd>08:00&nbsp;&#8209;&nbsp;20:00</dd>

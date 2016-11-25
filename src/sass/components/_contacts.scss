@@ -1,12 +1,56 @@
 .contacts {
+	$border-color: $panel-custom-border;
+	$bg: $panel-bg;
 	
 	&__panel {
 		border-width: 2px;
 		margin-bottom: 40px;
 		
+		> .row {
+			@include flex-default(stratch);
+			> [class*="col"] {
+				display: flex;
+			}
+		}
+		
 		.panel-body {
+			width: 100%;
 			padding-left: 0;
-			padding-right: 0;
+			padding-right: $grid-gutter-width;
+		}
+	}
+	
+	&__img {
+		width: auto;
+		height: 100%;
+	}
+	
+	&__img-wrapper {
+		position: relative;
+		overflow: hidden;
+		
+		&::before,
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			right: -29px;
+			width: 40px;
+			height: 55%;
+			background: $bg;
+			border-left: 2px solid $border-color;
+			transform-origin: center;
+			@media (min-width: $screen-md) {
+				right: -15px;
+			}
+		}
+		&::before {
+			bottom: 50%;
+			transform: rotate(-13deg);
+		}
+		&::after {
+			top:50%;
+			transform: rotate(13deg);
 		}
 	}
 	
@@ -19,7 +63,7 @@
 		}
 		
 		.icon {
-			margin-left: 1rem;
+			margin-left: 0.5em;
 		}
 	}
 	

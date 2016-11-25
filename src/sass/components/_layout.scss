@@ -1,8 +1,8 @@
-@mixin flex-default{
+@mixin flex-default($aligning: 'center'){
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: flex-start;
-	align-items: center;
+	align-items: $aligning;
 }
 
 .sidebar {
