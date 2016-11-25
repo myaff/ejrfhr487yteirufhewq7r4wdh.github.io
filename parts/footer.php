@@ -1,8 +1,8 @@
 				</div> <!-- /.workarea -->
-			</div> <!-- /.workarea-wrapper -->
+			</main> <!-- /.workarea-wrapper -->
 		</div> <!-- /.row -->
 	</div> <!-- /.container -->
-	<div class="footer">
+	<footer class="footer">
 		<div class="footer__top">
 			<div class="container">
 				<div class="row flex-row">
@@ -63,7 +63,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</footer>
 </div><!-- /.page -->
 
 <?php require('parts/page-aside-mobile.php'); ?>

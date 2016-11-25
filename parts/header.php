@@ -15,7 +15,7 @@
 <body>
 <div id="svg-placeholder" class="hidden"><?php require('dist/images/svg/sprite.svg'); ?></div>
 <div class="page <?php if($isHome){ ?>page-home<?php } ?>">
-	<div class="header">
+	<header class="header">
 		<div class="header__top">
 			<div class="container">
 				<div class="row">
@@ -88,13 +88,13 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</header>
 	<div class="container">
 		<div class="row">
 			<div class="sidebar__wrapper hidden-xs hidden-sm col-md-3">
 				<?php require('parts/sidebar.php'); ?>
 			</div>
-			<div class="workarea__wrapper col-xs-12 col-md-9">
+			<main class="workarea__wrapper col-xs-12 col-md-9">
 			<?php if (!$isHome) {?>
 				<ol class="breadcrumb">
 					<li class="breadcrumb__item">
