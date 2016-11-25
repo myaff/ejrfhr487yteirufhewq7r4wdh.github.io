@@ -71,7 +71,7 @@
 					<div class="col-xs-12 col-md-9">
 						<?php require('parts/header-menu.php'); ?>
 						<div class="header-contacts">
-							<div class="header-contacts__title">Многофункциональный центр предоставления государственных и муниципальных услуг города севастополь</div>
+							<div class="header-contacts__title">МНОГОФУНКЦИОНАЛЬНЫЙ ЦЕНТР ПРЕДОСТАВЛЕНИЯ ГОСУДАРСТВЕННЫХ И МУНИЦИПАЛЬНЫХ УСЛУГ ГОРОДА СЕВАСТОПОЛЬ</div>
 							<div class="header-contacts__info clearfix">
 								<a href="#" class="header-contacts__address pull-left">
 									<svg class="icon map"><use xlink:href="#map-pin"/></svg>

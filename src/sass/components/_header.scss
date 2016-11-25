@@ -272,7 +272,6 @@
 	&__title {
 		@include heading;
 		font-size: $font-size-base;
-		text-transform: uppercase;
 		
 		@media (min-width: $screen-md) {
 			font-size: $font-size-large;
