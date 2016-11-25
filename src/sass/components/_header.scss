@@ -9,6 +9,10 @@
 		}
 		@media (min-width: $screen-md){
 			padding: 1rem 0;
+			
+			.cols-wrapper {
+				@include flex-default('center','flex-end');
+			}
 		}
 		
 		.row {
@@ -51,7 +55,6 @@
 			
 			@media (min-width: $screen-md){
 				margin-bottom: 0;
-				margin-left: 16.66667%;
 			}
 			
 			@media (min-width: $screen-lg){
@@ -162,6 +165,7 @@
 				}
 				&__text {
 					padding-left: 0.5rem;
+					white-space: nowrap;
 					@media (min-width: $screen-md){
 						padding-left: 1rem;
 					}
@@ -175,7 +179,8 @@
 			
 			@media (min-width: $screen-md){
 				margin-top: 0;
-				width: 14.667%;
+				margin-left: 1rem;
+				flex: 0 0 133px;
 				
 				.tel {
 					position: absolute;
@@ -225,8 +230,7 @@
 			}
 			
 			@media (min-width: $screen-md){
-				margin-left: 2%;
-				padding-left: 2em;
+				flex: 1 1 auto;
 			}
 		}
 		

@@ -2,41 +2,21 @@
 <div class="carousel carousel--home">
 	<div class="carousel__item">
 		<a href="#" class="carousel__link">
-			<picture>
-				<source media="(min-width: 768px)" srcset="images/carousel.jpg 883w" sizes="100vw">
-				<source media="(min-width: 320px)" srcset="images/carousel-mobile.jpg 634w" sizes="100vw">
-				<img class="carousel__img" srcset="images/carousel-mobile.jpg 634w" sizes="100vw" alt="Img"/>
-			</picture>
+			<img class="carousel__img" data-lazy="images/carousel.jpg" alt="Img"/>
 		</a>
 	</div>
 	<div class="carousel__item">
-		<picture>
-			<source media="(min-width: 768px)" srcset="images/carousel.jpg 883w" sizes="100vw">
-			<source media="(min-width: 320px)" srcset="images/carousel-mobile.jpg 634w" sizes="100vw">
-			<img class="carousel__img" srcset="images/carousel-mobile.jpg 634w" sizes="100vw" alt="Img"/>
-		</picture>
+		<img class="carousel__img" data-lazy="images/carousel.jpg" alt="Img"/>
 	</div>
 	<div class="carousel__item">
-		<picture>
-			<source media="(min-width: 768px)" srcset="images/carousel.jpg 883w" sizes="100vw">
-			<source media="(min-width: 320px)" srcset="images/carousel-mobile.jpg 634w" sizes="100vw">
-			<img class="carousel__img" srcset="images/carousel-mobile.jpg 634w" sizes="100vw" alt="Img"/>
-		</picture>
+		<img class="carousel__img" data-lazy="images/carousel.jpg" alt="Img"/>
 	</div>
 	<div class="carousel__item">
-		<picture>
-			<source media="(min-width: 768px)" srcset="images/carousel.jpg 883w" sizes="100vw">
-			<source media="(min-width: 320px)" srcset="images/carousel-mobile.jpg 634w" sizes="100vw">
-			<img class="carousel__img" srcset="images/carousel-mobile.jpg 634w" sizes="100vw" alt="Img"/>
-		</picture>
+		<img class="carousel__img" data-lazy="images/carousel.jpg" alt="Img"/>
 	</div>
 	<div class="carousel__item">
 		<a href="#" class="carousel__link">
-			<picture>
-				<source media="(min-width: 768px)" srcset="images/carousel.jpg 883w" sizes="100vw">
-				<source media="(min-width: 320px)" srcset="images/carousel-mobile.jpg 634w" sizes="100vw">
-				<img class="carousel__img" srcset="images/carousel-mobile.jpg 634w" sizes="100vw" alt="Img"/>
-			</picture>
+			<img class="carousel__img" data-lazy="images/carousel.jpg" alt="Img"/>
 		</a>
 	</div>
 </div>

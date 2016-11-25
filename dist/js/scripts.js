@@ -4,7 +4,8 @@ $(document).ready(function(){
 		arrows: false,
 		dots: true,
 		fade: true,
-		mobileFirst: true
+		mobileFirst: true,
+		lazyLoad: 'progressive'
 	});
 	
 	$('.js-toggle-class').on('click', function(e){
