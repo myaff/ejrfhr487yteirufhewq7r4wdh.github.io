@@ -10,10 +10,10 @@
 		</div>
 	<?php } ?>
 	
-	<div class="banners">
-		<div class="banners__item"><a href="#" class="banner__link"><img src="images/adv-banner.png" alt="ad"/></a></div>
-		<div class="banners__item"><a href="#" class="banner__link"><img src="images/adv-banner.png" alt="ad"/></a></div>
-		<div class="banners__item"><a href="#" class="banner__link"><img src="images/adv-banner.png" alt="ad"/></a></div>
-		<div class="banners__item"><a href="#" class="banner__link"><img src="images/adv-banner.png" alt="ad"/></a></div>
+	<div class="partner-imgs">
+		<div class="partner-imgs__item"><a href="#" class="partner-imgs__link"><img src="images/partner-img.png" alt="ad"/></a></div>
+		<div class="partner-imgs__item"><a href="#" class="partner-imgs__link"><img src="images/partner-img.png" alt="ad"/></a></div>
+		<div class="partner-imgs__item"><a href="#" class="partner-imgs__link"><img src="images/partner-img.png" alt="ad"/></a></div>
+		<div class="partner-imgs__item"><a href="#" class="partner-imgs__link"><img src="images/partner-img.png" alt="ad"/></a></div>
 	</div>
 </div>
