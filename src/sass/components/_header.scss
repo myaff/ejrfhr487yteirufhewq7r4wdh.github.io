@@ -303,8 +303,11 @@
 		padding: 0.4rem 0 0.6rem;
 		line-height: $address-line-height;
 		
-		&:hover {
+		&:hover,
+		&:active,
+		&:focus {
 			text-decoration: none;
+			outline: none;
 		}
 		
 		@media (min-width: $screen-md) {
