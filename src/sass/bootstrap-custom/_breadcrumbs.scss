@@ -24,6 +24,7 @@
 	margin-bottom: 0.25em;
 	margin-right: -1 * $border-radius-base;
 	max-width: 100%;
+	color: $breadcrumb-color;
 	
 	&:hover {
 		color: $breadcrumb-hover-color;
