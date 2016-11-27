@@ -329,6 +329,9 @@
 				margin-bottom: 0;
 				margin-right: $grid-gutter-width;
 			}
+			@media (min-width: $screen-lg) {
+				flex: 0 1 auto;
+			}
 		}
 		
 		.page-home & {
@@ -366,7 +369,7 @@
 	
 	&__workhours {
 		line-height: $address-line-height;
-		color: $brown-darker;
+		color: transparentize($brown-darker,0.2);
 		min-width: 0;
 		
 		span {
