@@ -58,7 +58,7 @@
 			}
 			
 			@media (min-width: $screen-lg){
-				padding-left: 0;
+				padding-left: 1rem;
 			}
 			
 			a {
@@ -112,6 +112,7 @@
 				position: absolute;
 				top: auto;
 				left: 0;
+				justify-content: flex-start;
 			}
 			
 			.header-button {
