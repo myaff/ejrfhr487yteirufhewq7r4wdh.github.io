@@ -77,13 +77,19 @@
 			margin-bottom: 1em;
 			
 			.icon {
+				fill: $footer-top-bg;
+				margin-top: 2px;
+				width: 100%;
+				height: 100%;
+			}
+			.icon-wrapper {
+				display: inline-block;
 				width: $font-size-small * 2;
 				height: $font-size-small * 2;
 				padding: $font-size-small/4 $font-size-small/4 0;
 				border-radius: 50%;
 				margin-right: 2rem;
 				background: currentColor;
-				fill: $footer-top-bg;
 			}
 			span {
 				color: #fff;
@@ -152,6 +158,7 @@
 	&__sitemap {
 		a {
 			color: #fff;
+			text-decoration: underline;
 		}
 	}
 }

@@ -25,7 +25,9 @@
 						<div class="footer__col-inner">
 							<div class="footer-lk">
 								<div class="footer-lk__title">
-									<svg class="icon"><use xlink:href="#user"/></svg>
+									<div class="icon-wrapper">
+										<svg class="icon"><use xlink:href="#user"/></svg>
+									</div>
 									<span>Личный кабинет</span>
 								</div>
 								<ul class="footer-lk__links">
