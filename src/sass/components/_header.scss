@@ -252,6 +252,12 @@
 			padding: 2rem 1rem;
 			text-align: right;
 			
+			@media (min-width: $screen-md){
+				.logo {
+					padding-right: 2rem;
+				}
+			}
+			
 			svg {
 				width: 170px;
 				height: 130px;
