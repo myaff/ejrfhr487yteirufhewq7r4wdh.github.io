@@ -211,11 +211,12 @@
 			@media (max-width: $screen-md){
 				position: absolute;
 				width: 100vw;
-				top: 75px;
-				left: calc(-1*(50vw - 50%));
+				top: 45px;
+				left: auto;
+				right: calc(-1 * (100vw - #{$container-sm}) / 2);
 				background: $header-top-bg;
-				padding-bottom: 1em;
-				z-index: $zindex-modal;
+				padding: 0 1em 1em;
+				z-index: $zindex-navbar;
 				
 				transform: scaleY(0);
 				transform-origin: top;
@@ -228,6 +229,7 @@
 			
 			@media (max-width: $screen-sm - 1){
 				top: 120px;
+				left: calc(-1*(50vw - 50%));
 			}
 			
 			@media (min-width: $screen-md){
