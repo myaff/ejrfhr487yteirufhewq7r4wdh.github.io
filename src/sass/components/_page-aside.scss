@@ -19,11 +19,15 @@
 		transform: translateX(0);
 	}
 	
-	&__inner {
+	&__overflow {
 		position: relative;
 		height: 100%;
-		padding: $grid-gutter-width $grid-gutter-width $grid-gutter-width*1.5;
 		overflow-y: auto;
+	}
+	
+	&__inner {
+		position: relative;
+		padding: $grid-gutter-width $grid-gutter-width $grid-gutter-width*1.5;
 	}
 	
 	&__head,
