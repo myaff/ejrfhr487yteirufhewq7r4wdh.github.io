@@ -366,6 +366,12 @@
 		.arrow-down {
 			font-size: $font-size-base + 2;
 			stroke: currentColor;
+			border-radius: 50%;
+		}
+		
+		&:hover .arrow-down {
+			background: currentColor;
+			stroke: #fff;
 		}
 	}
 	
