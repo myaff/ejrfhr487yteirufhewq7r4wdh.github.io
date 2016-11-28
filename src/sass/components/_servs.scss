@@ -24,13 +24,19 @@
 .servs {
 	margin-bottom: 2.5rem;
 	
+	&__list {
+		@media (min-width: $screen-sm) {
+			margin-bottom: 2rem;
+		}
+	}
+	
 	&__item {
 		font-size: $font-size-base + 1;
 		margin-bottom: 1px;
 		
 		@media (min-width: $screen-xs) {
 			font-size: $font-size-base - 1;
-			margin-bottom: 2rem;
+			margin-bottom: 0;
 		}
 	}
 	
@@ -38,12 +44,11 @@
 		@include serv-link;
 		
 		@media (min-width: $screen-xs) {
-			&, &:hover {
-				background: transparent;
-				
-				.next {
-					opacity: 0;
-				}
+			padding: 6px 4px;
+			background: transparent;
+			
+			&:hover {
+				background: $gray-lighter;
 			}
 		}
 	}
