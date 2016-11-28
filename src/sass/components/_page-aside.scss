@@ -1,10 +1,11 @@
 .page-aside {
 	position: fixed;
-	display: block!important;
+	display: block!important; // bootstrap's modal-script adds display: none; as element's style
 	top: 0;
 	left: 0;
 	width: 100%;
 	max-width: $page-aside-width;
+	padding: 0!important; // bootstrap's modal-script adds padding-left: 17px; as element's style
 	height: 100%;
 	background: $page-aside-bg;
 	z-index: $zindex-page-aside;

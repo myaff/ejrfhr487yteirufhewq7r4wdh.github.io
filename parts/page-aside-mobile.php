@@ -1,4 +1,4 @@
-<div class="page-aside modal fade no-hide" id="mobile-menu">
+<div class="page-aside modal" id="mobile-menu">
 	<div class="page-aside__overflow">
 		<div class="page-aside__inner">
 			<div class="page-aside__head">		

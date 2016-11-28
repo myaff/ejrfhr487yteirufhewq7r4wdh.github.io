@@ -15,10 +15,10 @@ $(document).ready(function(){
 		$(target).toggleClass(classForToggle);
 	});
 	
-	$('.modal.no-hide').modal({
-		backdrop: true,
-		show: false
+	$(document).on('click', '.modal-backdrop', function(){
+		$('.modal').modal('hide');
 	});
+	
 	
 	$('input[type="tel"]').inputmask("+7(999)999-99-99");
 	
