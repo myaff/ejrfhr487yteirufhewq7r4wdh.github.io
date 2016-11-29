@@ -17,7 +17,7 @@
 							<ul id="menu-collapse-1" class="menu-collapse menu collapse">
 								<li class="menu-collapse__item"><a href="#" class="menu-collapse__link">Подраздел 1</a></li>
 								<li class="menu-collapse__item"><a href="#" class="menu-collapse__link">Подраздел 2</a></li>
-								<li class="menu-collapse__item"><a href="#" class="menu-collapse__link">Подраздел 3 с длинным названием</a></li>
+								<li class="menu-collapse__item"><a href="#" class="menu-collapse__link">Подраздел 3 с длинным названием в две строки</a></li>
 								<li class="menu-collapse__item"><a href="#" class="menu-collapse__link">Подраздел 4</a></li>
 								<li class="menu-collapse__item"><a href="#" class="menu-collapse__link">Подраздел 5</a></li>
 							</ul>

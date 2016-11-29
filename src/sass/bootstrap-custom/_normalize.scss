@@ -433,7 +433,10 @@ svg {
 	&.arrow-down {
 		transform: rotate(90deg);
 		transform-origin: center;
-		fill: none;
-		stroke: currentColor;
+	}
+	&.arrow-circle {
+		padding: 4px;
+		border-radius: 50%;
+		border: 1px solid currentColor;
 	}
 }

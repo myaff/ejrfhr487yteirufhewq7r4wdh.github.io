@@ -21,6 +21,11 @@
 		
 		&-logo {
 			text-align: right;
+			
+			@media (min-width: $screen-sm){
+				margin-top: 0.5em;
+			}
+			
 			svg {
 				width: 130px;
 				height: 4rem;
@@ -35,13 +40,15 @@
 		.tel {
 			font-weight: bold;
 			color: $header-link-color;
+			text-decoration: none;
+			appearance: none;
 		}
 		&-logo .tel {
 			margin-top: 1rem;
 			margin-right: 1rem;
 		}
 		&-feedback .tel {
-			margin-bottom: 1em;
+			margin-bottom: 1rem;
 		}
 		
 		&-links {
@@ -84,7 +91,7 @@
 					margin: 0;
 				}
 				.icon {
-					stroke: currentColor;
+					color: #c8bab4;
 					font-size: 1.2em;
 					margin-left: 3px;
 					@media (max-width: $screen-md){
@@ -132,20 +139,19 @@
 					margin-right: 0;
 				}
 				
-				&:hover {
+				&:hover,
+				&:active,
+				&:focus {
+					outline: none;
 					text-decoration: none;
 					
 					.icon-box__icon {
-						background: $brand-primary;
+						background: $brown-base;
 						
 						@media (min-width: $screen-md){
 							background: $brown-light;
 						}
 					}
-				}
-				&:focus {
-					outline: none;
-					text-decoration: none;
 				}
 			}
 			
@@ -186,8 +192,9 @@
 				.tel {
 					position: absolute;
 					right: $grid-gutter-width / 2;
-					bottom: -9rem;
+					bottom: -6.8rem;
 					width: 190px;
+					margin-bottom: 0;
 					
 					font-size: $font-size-large;
 					line-height: 1.5;
@@ -201,6 +208,7 @@
 						height: 2.3rem;
 						margin-right: 0.5rem;
 						border-radius: 50%;
+						vertical-align: text-bottom;
 					}
 				}
 			}
@@ -271,15 +279,16 @@
 
 .header-contacts {
 	
-	$address-line-height: 23px;
+	$address-line-height: 25px;
 	
-	.page-home & {
-		padding-top: $font-size-large;
-	}
-	.page:not(.page-home) &{
-		@media (min-width: $screen-md) {
+	@media (max-width: $screen-md - 1) {
+		.page-home & {
 			padding-top: $font-size-large;
 		}
+	}
+	
+	@media (min-width: $screen-md) {
+		padding-top: $font-size-large + 4px;
 	}
 	
 	&__title {
@@ -289,7 +298,6 @@
 		
 		@media (min-width: $screen-md) {
 			font-size: $font-size-large;
-			margin-bottom: 0.4em;
 		}
 		.page:not(.page-home) & {
 			@media (max-width: $screen-md - 1){
@@ -312,17 +320,32 @@
 		padding: 0.4rem 0 0.6rem;
 		line-height: $address-line-height;
 		
-		&:hover,
-		&:active,
-		&:focus {
+		.page-home & {
+			@media (max-width: $screen-md - 1){
+				margin: 0.5em 0;
+			}
+		}
+		
+		&-link {
+			display: inline-block;
+			width: auto;
+		}
+		
+		&-link:hover,
+		&-link:active,
+		&-link:focus {
 			text-decoration: none;
 			outline: none;
+			
+			.arrow-down {
+				background: currentColor;
+				fill: #fff;
+			}
 		}
 		
 		@media (min-width: $screen-md) {
 			width: auto;
-			margin-bottom: 0;
-			margin-right: $grid-gutter-width;
+			margin: 0 $grid-gutter-width 0 0;
 		}
 		.page:not(.page-home) & {
 			@media (min-width: $screen-xs) {
@@ -330,6 +353,11 @@
 				flex: 1 0 auto;
 				margin-bottom: 0;
 				margin-right: $grid-gutter-width;
+			}
+			@media (max-width: $screen-md - 1) {
+				.icon.map {
+					display: none;
+				}
 			}
 			@media (min-width: $screen-lg) {
 				flex: 0 1 auto;
@@ -353,11 +381,20 @@
 			vertical-align: middle;
 			margin: 0 0.3rem;
 			@include truncate-text;
-			max-width: calc(100% - 3.3em);
+			
+			.page-home & {
+				@media (max-width: 399px) {
+					max-width: calc(100% - 3.3em);
+				}
+			}
+			
 			@media (min-width: $screen-md) {
 				max-width: 100%;
 			}
 			.page:not(.page-home) & {
+				@medis (max-width: $screen-md - 1){
+					max-width: calc(100% - 2em);
+				}
 				@media (min-width: $screen-xs) {
 					max-width: 100%;
 				}
@@ -365,13 +402,6 @@
 		}
 		.arrow-down {
 			font-size: $font-size-base + 2;
-			stroke: currentColor;
-			border-radius: 50%;
-		}
-		
-		&:hover .arrow-down {
-			background: currentColor;
-			stroke: #fff;
 		}
 	}
 	
@@ -394,10 +424,10 @@
 				span {
 					display: inline-block;
 					@include truncate-text;
-					max-width: calc(100% - 100px);
+					max-width: calc(100% - 85px);
 				}
 			}
-			@media (min-width: $screen-sm) {
+			@media (min-width: $screen-md) {
 				span {
 					max-width: calc(100% - 120px);
 				}

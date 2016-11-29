@@ -82,7 +82,7 @@
 					<div class="panel-title contacts__panel-title">
 						<a href="#">
 							<span>МФЦ ул.Вокзальная,&nbsp;10 г.&nbsp;Севастополя</span>
-							<svg class="icon arrow-down"><use xlink:href="#arrow-circle"/></svg>
+							<svg class="icon arrow-down arrow-circle"><use xlink:href="#arrow"/></svg>
 						</a>
 					</div>
 					<div class="row">

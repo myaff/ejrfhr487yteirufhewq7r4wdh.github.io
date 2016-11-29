@@ -31,6 +31,15 @@
 		}
 	}
 	
+	&__link {
+		&:hover,
+		&:active,
+		&:focus {
+			text-decoration: none;
+			outline: none;
+		}
+	}
+	
 	&__img {
 		position: absolute;
 		right: -7%;

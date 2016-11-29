@@ -69,9 +69,14 @@
 .mobile-secondary-menu {
 	color: $gray-base;
 	font-size: 16px;
+	padding-left: 25px;
 	
 	&__item {
 		margin-bottom: 1rem;
+		
+		&::before {
+			left: -1em;
+		}
 	}
 	
 	&__link,

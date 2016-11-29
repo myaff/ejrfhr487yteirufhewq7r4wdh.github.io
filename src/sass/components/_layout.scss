@@ -5,6 +5,11 @@
 	align-items: $align;
 }
 
+.page {
+	width: 100%;
+	overflow-x: hidden;
+}
+
 .sidebar {
 	max-width: $sidebar-width;
 }

@@ -6,7 +6,6 @@
 	<title>Document</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic-ext" rel="stylesheet">
 	<link rel="stylesheet" href="dist/template_styles.css">
 	<link rel="stylesheet" href="dist/styles.css">
 	<script src="dist/js/libs.min.js"></script>
@@ -24,8 +23,8 @@
 						<div class="tel hidden-sm">+7&nbsp;(8692)&nbsp;417&#8209;100</div>
 					</div>
 					<div class="col-xs-6 col-sm-6 col-md-5 col-md-offset-2 col-lg-6 header__top-links">
-						<a href="#">Записаться на прием <svg class="icon"><use xlink:href="#arrow-circle"/></svg></a>
-						<a href="#">Узнать статус дела <svg class="icon"><use xlink:href="#arrow-circle"/></svg></a>
+						<a href="#">Записаться на прием <svg class="icon arrow-circle"><use xlink:href="#arrow"/></svg></a>
+						<a href="#">Узнать статус дела <svg class="icon arrow-circle"><use xlink:href="#arrow"/></svg></a>
 					</div>
 					<div class="col-xs-12 col-sm-6 col-md-2 header__top-buttons">
 						<a href="#" class="icon-box__wrapper header-button hidden-md hidden-lg" data-target="#mobile-menu" data-toggle="modal">
@@ -75,11 +74,13 @@
 						<div class="header-contacts">
 							<div class="header-contacts__title">Многофункциональный центр предоставления государственных и муниципальных услуг города севастополь</div>
 							<div class="header-contacts__info clearfix">
-								<a href="#" class="header-contacts__address pull-left">
-									<svg class="icon map"><use xlink:href="#map-pin"/></svg>
-									<address>МФЦ ул.Вокзальная, 10 г. Севастополя</address>
-									<svg class="icon arrow-down"><use xlink:href="#arrow-circle"/></svg>
-								</a>
+								<div class="header-contacts__address pull-left">
+									<a href="#" class="header-contacts__address-link">
+										<svg class="icon map"><use xlink:href="#map-pin"/></svg>
+										<address>МФЦ ул.Вокзальная, 10 г. Севастополя</address>
+										<svg class="icon arrow-down arrow-circle"><use xlink:href="#arrow"/></svg>
+									</a>
+								</div>
 								<div class="header-contacts__workhours">
 									<span><b>Пн.-Пт:</b>&nbsp;08:00&nbsp;-&nbsp;20:00, <b>Сб.:</b>&nbsp;09:00&nbsp;-&nbsp;16:00, <b>Вс.:</b>&nbsp;Выходной</span>
 									<a href="#" class="readmore">Подробнее</a>
