@@ -17,6 +17,7 @@
 	
 	&__icon {
 		line-height: 1;
+		overflow: hidden;
 		
 		&.icon-circle {
 			width: ($font-size-large + 3) + 5px * 2 + 3px * 2 + 7px * 2;

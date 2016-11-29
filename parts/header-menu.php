@@ -3,7 +3,7 @@
 		<li class="header-menu__item active"><a href="#" class="header-menu__link">Главная</a></li>
 		<li class="header-menu__item dropdown dropdown-hover-action">
 			<a href="#" class="header-menu__link dropdown-toggle">Об учреждении</a>
-			<ul class="dropdown-menu">
+			<ul class="dropdown-menu menu">
 				<li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Подраздел 1</a></li>
 				<li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Подраздел 2</a></li>
 				<li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Подраздел 3 с длинным названием</a></li>

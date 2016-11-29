@@ -42,6 +42,15 @@
 			color: $header-link-color;
 			text-decoration: none;
 			appearance: none;
+			
+			a,
+			a:hover,
+			a:active,
+			a:focus {
+				color: currentColor;
+				text-decoration: none;
+				outline: none;
+			}
 		}
 		&-logo .tel {
 			margin-top: 1rem;
@@ -165,6 +174,7 @@
 						background: $brown-light;
 						.icon {
 							fill: $header-top-bg;
+							color: $header-top-bg;
 							font-size: 1.1em;
 							margin-top: 5px;
 						}
@@ -204,6 +214,7 @@
 						padding: 5px;
 						background: $brand-primary;
 						fill: #fff;
+						color: #fff;
 						width: 2.3rem;
 						height: 2.3rem;
 						margin-right: 0.5rem;
@@ -232,6 +243,17 @@
 				
 				&.open {
 					transform: scaleY(1);
+				}
+				
+				&::before {
+					content: '';
+					display: block;
+					width: 100%;
+					height: 1rem;
+					position: absolute;
+					top: -0.5rem;
+					left: 0;
+					background: $header-top-bg;
 				}
 			}
 			
@@ -447,15 +469,27 @@
 	}
 	
 	.readmore {
-		
 		@media (min-width: $screen-md) {
 			@include btn;
 			@include btn-default;
 			@include btn-xs;
 			
+			
 			text-decoration: none;
 			margin-left: 0;
 			margin-top: ($address-line-height - $btn-xs-height) / 2;
+			
+			&:hover, 
+			&:focus,
+			&:active,
+			&:hover:active {
+				outline: none;
+				box-shadow: none;
+				
+				background: $brown-base;
+				color: #fff;
+				border-color: transparent;
+			}
 		}
 	}
 }

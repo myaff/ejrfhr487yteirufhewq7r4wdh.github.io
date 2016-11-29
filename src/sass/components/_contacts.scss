@@ -77,6 +77,16 @@
 	
 	&__address {
 		margin-bottom: 1rem;
+		
+		a,
+		a:hover,
+		a:focus,
+		a:active {
+			color: currentColor;
+			text-decoration: none;
+			outline: none;
+		}
+		
 	}
 	
 	&__workhours {

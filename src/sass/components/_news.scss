@@ -17,4 +17,11 @@
 			color: currentColor;
 		}
 	}
+	
+	.readmore,
+	.readmore:hover,
+	.readmore:focus,
+	.readmore:active {
+		color: $brown-lighter;
+	}
 }
