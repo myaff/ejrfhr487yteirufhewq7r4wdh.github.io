@@ -166,6 +166,7 @@
                 <File name="src\sass\template_styles.scss" />
                 <File name="src\sass\_bootstrap.scss" />
                 <File name="src\sass\_override-variables.scss" />
+                <File name="src\sass\_fonts.scss" />
             </Folder>
         </Folder>
         <File name=".bowerrc" />

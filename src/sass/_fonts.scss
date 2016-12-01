@@ -4,8 +4,7 @@
 	src: local('☺'), 
 		 url($path + $file-name + '.woff') format('woff'), 
 		 url($path + $file-name + '.woff2') format('woff2'), 
-		 url($path + $file-name + '.ttf') format('truetype'), 
-		 url($path + $file-name + '.svg') format('svg');
+		 url($path + $file-name + '.ttf') format('truetype');
 	font-weight: $weight;
 	font-style: $variant;
 }
