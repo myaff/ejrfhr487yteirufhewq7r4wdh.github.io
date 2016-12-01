@@ -58,15 +58,15 @@
 		color: $brand-primary;
 		margin-bottom: 1em;
 		
-		a:hover,
-		a:active,
-		a:focus {
-			text-decoration: none;
-			outline: none;
-			
-			.icon {
-				background: currentColor;
-				fill: #fff;
+		a {
+			@include hover {
+				text-decoration: none;
+				
+				.icon {
+					background: $link-color;
+					fill: #fff;
+					color: #fff;
+				}
 			}
 		}
 		
@@ -78,14 +78,16 @@
 	&__address {
 		margin-bottom: 1rem;
 		
-		a,
-		a:hover,
-		a:focus,
-		a:active {
+		a {
 			color: currentColor;
 			text-decoration: none;
-			outline: none;
+			
+			@include hover {
+				color: currentColor;
+				text-decoration: none;
+			}
 		}
+		
 		
 	}
 	

@@ -11,7 +11,7 @@
 	background: $gray-lighter;
 	border-radius: $border-radius-base;
 	
-	&:hover {
+	@include hover {
 		background: $gray-light;
 		color: currentColor;
 		text-decoration: none;
@@ -47,7 +47,7 @@
 			padding: 6px 4px;
 			background: transparent;
 			
-			&:hover {
+			@include hover {
 				background: $gray-lighter;
 			}
 		}
@@ -100,7 +100,7 @@
 		position: relative;
 		border-bottom: 1px solid #e0cfc5;
 		
-		&:hover {
+		@include hover {
 			border-color: transparent;
 		}
 	}

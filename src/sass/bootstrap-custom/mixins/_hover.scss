@@ -1,0 +1,6 @@
+@mixin hover() {
+    html:not(.bx-touch) &:hover, 
+	.bx-touch &:active {
+        @content;
+    }
+}

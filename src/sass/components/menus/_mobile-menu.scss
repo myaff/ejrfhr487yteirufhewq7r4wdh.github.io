@@ -28,9 +28,11 @@
 		position: relative;
 		font-weight: bold;
 		line-height: 1;
+		color: currentColor;
 		
-		&:hover {
+		@include hover {
 			text-decoration: none;
+			color: currentColor;
 		}
 		
 		.arrow-down {
@@ -61,6 +63,10 @@
 		&__link {
 			display: block;
 			padding: 4px 0;
+			@include hover {
+				color: currentColor;
+				text-decoration: none;
+			}
 		}
 		
 	}
@@ -79,9 +85,12 @@
 		}
 	}
 	
-	&__link,
-	&__link:hover {
+	&__link {
 		color: currentColor;
 		text-decoration: none;
+		@include hover {
+			color: currentColor;
+			text-decoration: none;
+		}
 	}
 }

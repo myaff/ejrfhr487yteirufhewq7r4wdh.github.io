@@ -84,6 +84,10 @@
 				margin-bottom: $font-size-small;
 				text-decoration: underline;
 				
+				@include hover {
+					color: $header-link-color;
+				}
+				
 				@media (min-width: $screen-sm){
 					display: inline-block;
 					margin-bottom: 0;
@@ -93,6 +97,10 @@
 					margin-right: 5rem;
 					text-decoration: none;
 					color: #fff;
+					@include hover {
+						color: #fff;
+						text-decoration: none;
+					}
 				}
 				
 				
@@ -148,12 +156,9 @@
 					margin-right: 0;
 				}
 				
-				&:hover,
-				&:active,
-				&:focus {
-					outline: none;
+				@include hover {
+					color: #fff;
 					text-decoration: none;
-					
 					.icon-box__icon {
 						background: $brown-base;
 						
@@ -351,21 +356,18 @@
 		&-link {
 			display: inline-block;
 			width: auto;
-		}
-		
-		&-link:hover,
-		&-link:active,
-		&-link:focus {
-			text-decoration: none;
-			outline: none;
 			
-			.arrow-down {
-				background: $link-color;
-				fill: #fff;
-				color: #fff;
-				border-color: transparent;
+			@include hover {
+				text-decoration: none;
+				.arrow-down {
+					background: $link-color;
+					fill: #fff;
+					color: #fff;
+					border-color: transparent;
+				}
 			}
 		}
+
 		
 		@media (min-width: $screen-md) {
 			width: auto;
@@ -481,12 +483,7 @@
 			margin-left: 0;
 			margin-top: ($address-line-height - $btn-xs-height) / 2;
 			
-			&:hover, 
-			&:focus,
-			&:active,
-			&:hover:active {
-				outline: none;
-				box-shadow: none;
+			@include hover {
 				
 				background: $brown-base;
 				color: #fff;

@@ -62,20 +62,17 @@
   }
 
   &__link {
-    &:hover,
-    &:focus {
+    @include hover {
       z-index: 2;
       color: $pagination-hover-color;
       background-color: $pagination-hover-bg;
       border-color: $pagination-hover-border;
+	  text-decoration: none;
     }
   }
 
   > .active > a,
   > .active > span {
-    &,
-    &:hover,
-    &:focus {
       z-index: 3;
       color: $pagination-active-color;
       background-color: $pagination-active-bg;
@@ -83,7 +80,11 @@
 	  padding: $padding-base-vertical $padding-base-horizontal / 2;
 	  width: $padding-base-horizontal * 3 + 2;
       cursor: default;
-    }
+	  @include hover {
+		  color: $pagination-active-color;
+		  background-color: $pagination-active-bg;
+		  border-color: $pagination-active-border;
+	  }
   }
   
   .prev &__icon {
@@ -99,7 +100,7 @@
 	  width: $padding-base-horizontal * 3 + 2;
 	  padding: $padding-base-vertical $padding-base-horizontal / 2;
 	  
-	  &:hover {
+	  @include hover {
 		  border-color: $pagination-icon-hover-border;
 		  color: $pagination-icon-hover-color;
 		  background: $pagination-icon-hover-bg;
@@ -108,15 +109,17 @@
 
   > .disabled {
     > span,
-    > span:hover,
-    > span:focus,
-    > a,
-    > a:hover,
-    > a:focus {
+    > a {
       color: $pagination-disabled-color;
       background-color: $pagination-disabled-bg;
       border-color: $pagination-disabled-border;
       cursor: $cursor-disabled;
+	  @include hover {
+		  color: $pagination-disabled-color;
+		  background-color: $pagination-disabled-bg;
+		  border-color: $pagination-disabled-border;
+		  cursor: $cursor-disabled;
+	  }
     }
   }
 }

@@ -120,3 +120,10 @@
     right: percentage(($columns / $grid-columns));
   }
 }
+
+@mixin flex-default($align: center, $justify: flex-start){
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: $justify;
+	align-items: $align;
+}

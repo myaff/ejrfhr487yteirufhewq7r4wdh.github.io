@@ -7,11 +7,9 @@
 	border-radius: $border-radius-base;
 	background: url('images/serv-bg.png') top left no-repeat, linear-gradient(-150deg, #e04e39 0%, #c39167 100%);
 	
-	&:hover,
-	&:focus {
+	@include hover {
 		color: #fff;
 		text-decoration: none;
-		outline: none;
 		background: url('images/serv-bg.png') top left no-repeat, linear-gradient(-150deg, #e67161 0%, #c39167 100%);
 	}
 	

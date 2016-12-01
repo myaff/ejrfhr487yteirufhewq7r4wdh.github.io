@@ -22,6 +22,10 @@
   a {
 	  color: currentColor;
 	  text-decoration: underline;
+	  
+	  @include hover {
+		  color: currentColor;
+	  }
   }
 };
 
@@ -410,6 +414,11 @@ img.pull-right {
 .readmore {
 	color: $brown-base;
 	text-decoration: underline;
+	
+	@include hover {
+		color: $brown-base;
+		text-decoration: underline;
+	}
 }
 
 hr {

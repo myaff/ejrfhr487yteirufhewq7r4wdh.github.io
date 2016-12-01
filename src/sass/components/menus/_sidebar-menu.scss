@@ -15,7 +15,7 @@
 		text-align: right;
 		min-height: 55px; // по макету
 		
-		&:hover {
+		@include hover {
 			color: $sidebar-menu-hover-color;
 			background: $sidebar-menu-hover-bg;
 			text-decoration: none;

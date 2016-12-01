@@ -10,7 +10,7 @@
 	.btn-default {
 		color: $footer-color;
 		border-color: $footer-color;
-		&:hover {
+		@include hover {
 			border-color: transparent;
 			color: #fff;
 		}
@@ -118,10 +118,16 @@
 				margin-bottom: 0.5em;
 			}
 			
-			a, a:hover {
+			a {
 				color: currentColor;
 				font-size: $font-size-small + 1;
 				text-decoration: underline;
+				
+				@include hover {
+					color: currentColor;
+					font-size: $font-size-small + 1;
+					text-decoration: underline;
+				}
 			}
 		}
 		.btn {
@@ -134,13 +140,13 @@
 	}
 	&-contacts {
 		
-		a:not(.btn),
-		a:not(.btn):hover,
-		a:not(.btn):focus,
-		a:not(.btn):active {
+		a:not(.btn) {
 			color: currentColor;
 			text-decoration: none;
-			outline: none;
+			@include hover {
+				color: currentColor;
+				text-decoration: none;
+			}
 		}
 		
 		&__tel {
@@ -185,6 +191,10 @@
 		a {
 			color: #fff;
 			text-decoration: underline;
+			
+			@include hover {
+				color: #fff;
+			}
 		}
 	}
 }

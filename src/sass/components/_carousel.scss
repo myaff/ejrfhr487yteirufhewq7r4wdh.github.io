@@ -32,11 +32,8 @@
 	}
 	
 	&__link {
-		&:hover,
-		&:active,
-		&:focus {
+		@include hover {
 			text-decoration: none;
-			outline: none;
 		}
 	}
 	
@@ -95,14 +92,15 @@
 		background: $brand-primary-lighter;
 		border: 0;
 		padding: 0;
-		
-		&:focus {
-			outline: none;
-		}
+		@include non-focus;
 	}
 	
-	.slick-active button,
-	button:hover {
+	.slick-active button {
 		background: $brand-primary-light;
+	}
+	button {
+		@include hover {
+			background: $brand-primary-light;
+		}
 	}
 }

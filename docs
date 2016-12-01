@@ -99,6 +99,7 @@
                         <File name="src\sass\bootstrap-custom\mixins\_text-overflow.scss" />
                         <File name="src\sass\bootstrap-custom\mixins\_truncate-text.scss" />
                         <File name="src\sass\bootstrap-custom\mixins\_vendor-prefixes.scss" />
+                        <File name="src\sass\bootstrap-custom\mixins\_hover.scss" />
                     </Folder>
                     <File name="src\sass\bootstrap-custom\_alerts.scss" />
                     <File name="src\sass\bootstrap-custom\_badges.scss" />

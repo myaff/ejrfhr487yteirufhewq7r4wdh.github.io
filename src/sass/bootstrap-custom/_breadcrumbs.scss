@@ -26,21 +26,13 @@
 	max-width: 100%;
 	color: $breadcrumb-color;
 	
-	&:hover {
+	@include hover {
 		color: $breadcrumb-hover-color;
 	}
 
-	/*
-    &::after {
-      content: "#{$breadcrumb-separator}"; // Unicode space added since inline-block means non-collapsing white-space
-      padding: 0 5px;
-      color: currentColor;
-    }
-	*/
   }
   
-  &__link,
-  &__link:hover {
+  &__link {
 	  position: relative;
 	  display: inline-block;
 	  vertical-align: middle;
@@ -53,6 +45,10 @@
 		  display: inline-block;
 		  vertical-align: bottom;
 		  @include truncate-text;
+	  }
+	  @include hover {
+		  color: currentColor;
+		  text-decoration: none;
 	  }
   }
   
