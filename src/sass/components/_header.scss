@@ -360,8 +360,10 @@
 			outline: none;
 			
 			.arrow-down {
-				background: currentColor;
+				background: $link-color;
 				fill: #fff;
+				color: #fff;
+				border-color: transparent;
 			}
 		}
 		
