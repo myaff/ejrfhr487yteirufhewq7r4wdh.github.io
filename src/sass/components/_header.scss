@@ -94,13 +94,16 @@
 					margin-right: 3rem;
 				}
 				@media (min-width: $screen-md){
-					margin-right: 5rem;
+					margin-right: 3.5rem;
 					text-decoration: none;
 					color: #fff;
 					@include hover {
 						color: #fff;
 						text-decoration: none;
 					}
+				}
+				@media (min-width: $screen-lg){
+					margin-right: 5rem;
 				}
 				
 				
