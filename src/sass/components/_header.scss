@@ -359,8 +359,10 @@
 		&-link {
 			display: inline-block;
 			width: auto;
+			color: $link-color;
 			
 			@include hover {
+				color: $link-color;
 				text-decoration: none;
 				.arrow-down {
 					background: $link-color;
