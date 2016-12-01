@@ -23,10 +23,12 @@
 			padding: 0 20px;
 		}
 		&__link {
-			display: block;
+			display: inline-block;
 			text-decoration: underline;
 			padding: 0;
-			white-space: initial;
+			white-space: normal;
+			min-width: 0;
+			max-width: 100%;
 			
 			@include hover {
 				text-decoration: underline;
