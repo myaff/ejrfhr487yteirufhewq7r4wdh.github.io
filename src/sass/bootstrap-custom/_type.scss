@@ -33,7 +33,7 @@
 	@include heading;
 	font-size: $font-size-base;
 	text-transform: uppercase;
-	margin-bottom: 1em;
+	margin-bottom: $font-size-base;
 	
 	@media (min-width: $screen-xs){
 		font-size: $font-size-large;
@@ -87,7 +87,7 @@ h6, .h6 { font-size: $font-size-h6; }
 // -------------------------
 
 p {
-  margin: 0 0 1em;
+  margin: 0 0 0.8em;
 }
 
 .lead {
@@ -425,7 +425,7 @@ hr {
 	color: $hr-color;
 	border-color: currentColor;
 }
-@media (min-width: $screen-xs) {
+@media (min-width: $screen-sm) {
 	.bordered-box {
 		border-bottom: 1px solid $hr-color;
 		margin-bottom: 2.5rem;

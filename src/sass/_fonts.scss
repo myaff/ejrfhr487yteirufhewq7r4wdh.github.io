@@ -1,6 +1,5 @@
 @mixin fonts($font-name, $file-name, $weight, $variant, $path: '../fonts/'){
-	font-name: $font-name;
-	src: url($path + $file-name + '.eot');
+	font-family: $font-name;
 	src: local('☺'), 
 		 url($path + $file-name + '.woff') format('woff'), 
 		 url($path + $file-name + '.woff2') format('woff2'), 
@@ -10,10 +9,8 @@
 }
 
 @each $font-name, $file-name, $weight, $variant in 
-	  ('pt sans', 'pt_sans-regular', normal, normal),
-	  ('pt sans', 'pt_sans-italic', normal, italic),
-	  ('pt sans', 'pt_sans-bold', bold, normal),
-	  ('pt sans', 'pt_sans-bolditalic', bold, italic) {
+	  ('PT Sans', 'pt_sans-regular', normal, normal),
+	  ('PT Sans', 'pt_sans-bold', bold, normal) {
 		  
 		  @font-face {
 			  @include fonts($font-name, $file-name, $weight, $variant);

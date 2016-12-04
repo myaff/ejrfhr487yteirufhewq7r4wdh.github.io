@@ -8,9 +8,10 @@
 	}
 	
 	.nav &__link {
-		padding: 5px 15px;
+		padding: 5px 16px;
 		font-size: $font-size;
 		line-height: $font-size-base;
+		min-width: 80px;
 	}
 	
 	.dropdown-menu {

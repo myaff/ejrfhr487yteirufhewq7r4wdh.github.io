@@ -55,6 +55,7 @@
 	}
 	
 	&__panel-title {
+		font-size: $font-size-base;
 		color: $link-color;
 		margin-bottom: 1em;
 		
@@ -71,7 +72,8 @@
 		}
 		
 		.icon {
-			margin-left: 0.5em;
+			margin-left: 0.4em;
+			font-size: $font-size-base + 2;
 		}
 	}
 	
@@ -97,6 +99,7 @@
 		dt {
 			width: 90px;
 			text-align: left;
+			white-space: normal;
 		}
 		dd {
 			margin-left: 100px;

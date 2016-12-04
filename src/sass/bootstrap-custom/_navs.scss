@@ -131,9 +131,6 @@
           background-color: $nav-pills-link-hover-bg;
 	  }
     }
-    + li {
-      margin-left: 2px;
-    }
 
     // Active state
     &.active > a {

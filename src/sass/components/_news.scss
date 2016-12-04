@@ -1,6 +1,12 @@
 .news {
 	&__item {
 		margin-bottom: 2em;
+		
+		@media (max-width: $screen-sm){
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
 	}
 	
 	&__item-date {
@@ -10,8 +16,9 @@
 	
 	&__item-title {
 		font-size: $font-size-large - 1;
+		line-height: 1.2;
 		color: $brown-lighter;
-		margin: 1rem 0;
+		margin: 0.5rem 0 0.5em;
 		
 		a {
 			color: currentColor;

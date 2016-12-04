@@ -67,6 +67,8 @@
 				padding-top: 0;
 				padding-left: 4rem;
 				margin-bottom: 1rem;
+				display: flex;
+				flex-flow: row nowrap;
 			}
 			
 			@media (min-width: $screen-md){
@@ -79,6 +81,7 @@
 			
 			a {
 				display: block;
+				flex: 1 0 auto;
 				font-size: $font-size-base - 1;
 				color: $header-link-color;
 				margin-bottom: $font-size-small;
@@ -125,7 +128,7 @@
 			@include clearfix;
 			margin-top: 1.5rem;
 			display: flex;
-			flex-flow: row wrap;
+			flex-flow: row nowrap;
 			justify-content: center;
 			align-items: center;
 			
@@ -147,6 +150,7 @@
 				width: auto;
 				margin-right: 5%;
 				color: #fff;
+				flex: 1 0 auto;
 				
 				@media (min-width: $screen-sm){
 					margin-right: 3rem;
