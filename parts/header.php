@@ -8,6 +8,8 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<link rel="stylesheet" href="dist/template_styles.css">
 	<link rel="stylesheet" href="dist/styles.css">
+	<!-- стили страниц временно тут -->
+	<link rel="stylesheet" href="dist/mfc-map.css">
 	<script src="dist/js/libs.min.js"></script>
 	<script src="dist/js/scripts.js"></script>
 </head>

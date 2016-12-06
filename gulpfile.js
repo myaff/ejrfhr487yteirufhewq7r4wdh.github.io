@@ -16,7 +16,7 @@ var source = 'src/',
 
 // Our scss source folder
 var scss = {
-	in: [source + 'sass/template_styles.scss', source + 'sass/styles.scss'],
+	in: [source + 'sass/template_styles.scss', source + 'sass/styles.scss', source + 'sass/pages/mfc-map.scss'],
 	out: dest,
 	watch: source + 'sass/**/*',
 	sassOpts: {
