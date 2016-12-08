@@ -34,6 +34,10 @@ label {
   max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
   margin-bottom: 5px;
   font-size: $font-size-base - 1;
+  .form-inline & {
+	  margin-bottom: 0;
+	  vertical-align: middle;
+  }
 }
 
 
@@ -159,7 +163,11 @@ output {
     cursor: $cursor-disabled;
   }
 
-  // [converter] extracted textarea& to textarea.form-control
+  .action-block & {
+	  background: #fff;
+	  border-color: #e7d3c2;
+	  color: $text-color;
+  }
 }
 
 // Reset height for `textarea`s

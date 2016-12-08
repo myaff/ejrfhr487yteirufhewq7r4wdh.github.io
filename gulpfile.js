@@ -16,7 +16,10 @@ var source = 'src/',
 
 // Our scss source folder
 var scss = {
-	in: [source + 'sass/template_styles.scss', source + 'sass/styles.scss', source + 'sass/pages/mfc-map.scss'],
+	in: [source + 'sass/template_styles.scss', 
+		 source + 'sass/styles.scss', 
+		 source + 'sass/pages/mfc-map.scss',
+		 source + 'sass/pages/faq.scss',],
 	out: dest,
 	watch: source + 'sass/**/*',
 	sassOpts: {
@@ -91,7 +94,8 @@ gulp.task('jslibs', function(){
 			source + 'libs/jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js',
 			source + 'libs/inputmask-multi/js/jquery.inputmask-multi.min.js',
 			source + 'libs/svg4everybody/dist/svg4everybody.min.js',
-			source + 'libs/slick-carousel/slick/slick.min.js'
+			source + 'libs/slick-carousel/slick/slick.min.js',
+			source + 'libs/chosen/chosen.jquery.js'
 		])
 		.pipe(concat('libs.min.js'))
 		.pipe(uglify())
