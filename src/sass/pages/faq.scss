@@ -1,0 +1,66 @@
+@import '../override-variables';
+@import '../bootstrap-custom/mixins';
+
+.faq {
+	
+	&__item {
+		padding-bottom: 2rem;
+		margin-bottom: 2rem;
+		border-bottom: 1px solid $hr-color;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	
+	&__item-date {
+		font-size: $font-size-small + 1;
+		font-weight: bold;
+		margin-bottom: 0.7rem;
+	}
+	
+	&__item-preview-text {
+		.readmore {
+			@media (min-width: $screen-sm) {
+				margin-left: 0.5rem;
+			}
+		}
+		>*:last-child {
+			margin-bottom: 0;
+		}
+	}
+	
+	&__filter {
+		margin-bottom: 2rem;
+		
+		label {
+			font-weight: bold;
+			font-size: $font-size-base;
+			
+			@media (max-width: $screen-sm - 1) {
+				margin-bottom: 1rem;
+			}
+			
+			@media (min-width: $screen-sm) {
+				margin-right: 1em;
+			}
+		}
+		
+		select.form-control {
+			@media (min-width: $screen-sm) {
+				width: 255px;
+				margin: 0;
+			}
+		}
+		
+		.btn {
+			@media (max-width: $screen-sm - 1) {
+				max-width: 270px;
+			}
+			@media (min-width: $screen-sm) {
+				margin-left: 0.5em;
+				padding-left: 2.5rem;
+				padding-right: 2.5rem;
+			}
+		}
+	}
+}

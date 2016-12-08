@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="dist/styles.css">
 	<!-- стили страниц временно тут -->
 	<link rel="stylesheet" href="dist/mfc-map.css">
+	<link rel="stylesheet" href="dist/faq.css">
 	<script src="dist/js/libs.min.js"></script>
 	<script src="dist/js/scripts.js"></script>
 </head>
