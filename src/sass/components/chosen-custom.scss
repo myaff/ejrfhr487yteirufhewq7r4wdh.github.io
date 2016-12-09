@@ -58,12 +58,11 @@ $chosen-border-color: #e7d3c2;
   position: relative;
   display: block;
   overflow: hidden;
-  height: $input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
-  padding: ($padding-base-vertical + 2) $padding-base-horizontal;
+  padding: $padding-base-vertical $padding-base-horizontal ($padding-base-vertical + 1);
   font-size: $font-size-base;
-  line-height: $line-height-base;
+  line-height: 1;
   border: 1px solid $chosen-border-color;
-  border-radius: $border-radius-base;
+  border-radius: $border-radius-base - 1;
   background-color: #fff;
   color: $text-color;
   text-decoration: none;
@@ -146,7 +145,7 @@ $chosen-border-color: #e7d3c2;
 }
 .chosen-container-single .chosen-drop {
   margin-top: -1px;
-  border-radius: 0 0 $border-radius-base $border-radius-base;
+  border-radius: 0 0 ($border-radius-base - 1) ($border-radius-base - 1);
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
 }
 .chosen-container-single.chosen-container-single-nosearch .chosen-search {
