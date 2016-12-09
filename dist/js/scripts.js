@@ -23,7 +23,8 @@ $(document).ready(function(){
 	$('input[type="tel"]').inputmask("+7(999)999-99-99");
 	
 	$('.chosen-select').chosen({
-		disable_search_threshold: 10
+		disable_search: true,
+		width: 'auto'
 	})
 	
 });
